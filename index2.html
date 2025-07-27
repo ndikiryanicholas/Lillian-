@@ -63,6 +63,22 @@
       60% { transform: scale(1.04) rotate(2deg); opacity: 1; }
       100% { transform: scale(1) rotate(0); opacity: 1; }
     }
+    .back-to-toc-btn {
+      display: inline-block;
+      background: #ffd6e3;
+      color: #6c63ff;
+      font-weight: bold;
+      border-radius: 20px;
+      padding: 0.5em 1.2em;
+      margin-bottom: 1.1em;
+      text-decoration: none;
+      box-shadow: 0 1px 6px #e0c3fc44;
+      transition: background 0.15s, color 0.15s;
+    }
+    .back-to-toc-btn:hover {
+      background: #ff69b4;
+      color: #fff;
+    }
     .title-area {
       text-align: center;
       margin-bottom: 1em;
@@ -256,7 +272,8 @@
     <div class="emotion"><strong>❤️‍🔥 Emotion:</strong> True love, pain, growth, and destiny.</div>
     <div class="narration"><strong>📖 Narration Style:</strong> Personal, poetic, emotional, reflective.</div>
 
-    <section class="toc-section">
+    <!-- Table of Contents with ID for anchor navigation -->
+    <section class="toc-section" id="toc">
       <h3>📚 Table of Contents</h3>
       <ol>
         <li><a href="#chapter1">When I First Saw the Stars</a></li>
@@ -282,243 +299,14 @@
       </ol>
     </section>
 
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>The Up-Town Girl by Bagenda Nicholas | Other</title>
-  <meta name="author" content="Bagenda Nicholas">
-  <meta name="description" content="A poetic, personal, and emotional story of love, growth, and destiny.">
-  <style>
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #f8f9fa 0%, #e0c3fc 100%);
-      color: #23223b;
-      margin: 0;
-      padding: 0 0 2em 0;
-    }
-    .top-bar {
-      width: 100%;
-      padding: 1.2em 0 0.7em 0;
-      background: transparent;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .back-btn {
-      background: #6c63ff;
-      color: #fff;
-      text-decoration: none;
-      padding: 0.65em 1.5em;
-      border-radius: 30px;
-      font-size: 1.07em;
-      font-weight: bold;
-      margin-right: 2.5em;
-      box-shadow: 0 2px 8px #e0c3fc44;
-      transition: background 0.2s, color 0.2s, transform 0.2s;
-      border: none;
-      outline: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5em;
-    }
-    .back-btn:hover {
-      background: #ff69b4;
-      color: #fff;
-      transform: scale(1.06);
-    }
-    .container {
-      background: #fff;
-      border-radius: 20px;
-      margin: 2em auto 2em auto;
-      padding: 2.3em 1.5em 2.5em 1.5em;
-      max-width: 800px;
-      box-shadow: 0 4px 18px rgba(255, 105, 180, 0.13), 0 1.5px 8px #e0c3fc33;
-      position: relative;
-      overflow: hidden;
-      animation: popIn 1.1s cubic-bezier(.53,1.57,.71,.96);
-    }
-    @keyframes popIn {
-      0% { transform: scale(0.92) rotate(-4deg); opacity: 0; }
-      60% { transform: scale(1.04) rotate(2deg); opacity: 1; }
-      100% { transform: scale(1) rotate(0); opacity: 1; }
-    }
-    .title-area {
-      text-align: center;
-      margin-bottom: 1em;
-    }
-    .title-area h1 {
-      font-size: 2.4rem;
-      margin: 0.1em 0 0.18em 0;
-      color: #ff69b4;
-      letter-spacing: 1px;
-    }
-    .meta, .copyright, .main-message, .emotion, .narration, .theme {
-      margin-bottom: 1em;
-      font-size: 1.04em;
-    }
-    .theme blockquote {
-      background: #e9f1f7;
-      border-left: 4px solid #6c63ff;
-      font-style: italic;
-      margin: 0.7em 0;
-      padding: 0.7em 1.2em;
-      color: #234087;
-    }
-    .meta {
-      font-size: 1.08em;
-      color: #6c63ff;
-      text-align: center;
-    }
-    .copyright {
-      background: #f6f6f6;
-      border-radius: 0.4em;
-      padding: 0.7em;
-      border: 1px solid #eee;
-      font-size: 0.97em;
-      text-align: center;
-      margin-bottom: 1.3em;
-    }
-    .main-message, .emotion, .narration {
-      background: #f7eafd;
-      border-radius: 0.4em;
-      padding: 0.6em 1em;
-      border: 1px solid #e0c3fc;
-      margin-bottom: 0.4em;
-      font-size: 1.04em;
-      text-align: center;
-    }
-    .toc-section {
-      background: #fff7fb;
-      border-radius: 14px;
-      box-shadow: 0 2px 10px #efd1f1;
-      padding: 1.3em 1em 1.2em 1em;
-      margin: 2.3em auto 2em auto;
-      color: #444;
-      position: relative;
-      z-index: 2;
-      text-align: left;
-      max-width: 95%;
-      font-size: 1.07em;
-    }
-    .toc-section h3 {
-      margin-top: 0;
-      color: #ff69b4;
-      font-size: 1.15em;
-      letter-spacing: 0.5px;
-      margin-bottom: 0.7em;
-      text-align: center;
-    }
-    .toc-section ol {
-      padding-left: 1.4em;
-      margin: 0;
-    }
-    .toc-section li {
-      margin-bottom: 0.33em;
-      line-height: 1.4;
-    }
-    .toc-section a {
-      color: #6c63ff;
-      text-decoration: none;
-      transition: color 0.16s;
-      border-radius: 5px;
-      padding: 1px 4px;
-    }
-    .toc-section a:hover {
-      color: #ff69b4;
-      background: #f3eaff;
-    }
-    .chapter-title {
-      font-size: 1.22em;
-      margin-top: 2.3em;
-      margin-bottom: 0.6em;
-      color: #2b5d6e;
-      letter-spacing: 0.5px;
-      font-weight: bold;
-      text-shadow: 0 2px 8px #e0c3fc18;
-    }
-    blockquote {
-      margin: 1em 0;
-      padding: 0.8em 1.2em;
-      background: #e9f1f7;
-      border-left: 4px solid #234087;
-      font-style: italic;
-      color: #234087;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #ddd;
-      margin: 2em 0 1.3em 0;
-    }
-    .chapter {
-      margin-bottom: 2.4em;
-      font-size: 1.05em;
-    }
-    .end, .epilogue {
-      text-align: center;
-      font-weight: bold;
-      font-size: 1.17em;
-      margin-top: 3em;
-    }
-    .epilogue {
-      background: #f6f6f6;
-      padding: 1em;
-      border-radius: 0.4em;
-      margin-top: 2em;
-      border: 1px solid #ccc;
-      font-weight: normal;
-    }
-    .confetti {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .dot {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.7;
-      animation: floatDot 5s linear infinite;
-    }
-    .dot1 { width: 16px; height: 16px; background: #fcb0fd; left: 7%; top: 12%; animation-delay: 0s;}
-    .dot2 { width: 12px; height: 12px; background: #6c63ff; left: 92%; top: 11%; animation-delay: 1s;}
-    .dot3 { width: 9px;  height: 9px;  background: #ffd6e3; left: 15%; top: 98%; animation-delay: 2.2s;}
-    .dot4 { width: 14px; height: 14px; background: #ff69b4; left: 82%; top: 91%; animation-delay: 3.1s;}
-    .dot5 { width: 10px; height: 10px; background: #b2f7ef; left: 60%; top: 45%; animation-delay: 1.5s;}
-    @keyframes floatDot {
-      0% { transform: translateY(0) scale(1);}
-      20% { transform: translateY(-8px) scale(1.1);}
-      50% { transform: translateY(8px) scale(0.92);}
-      100% { transform: translateY(0) scale(1);}
-    }
-    @media (max-width: 850px) {
-      .container { padding: 1.1em 0.2em 2em 0.2em; }
-    }
-    @media (max-width: 600px) {
-      .title-area h1 { font-size: 1.3em; }
-      .container { padding: 0.7em 0.1em 1.2em 0.1em; }
-      .chapter-title { font-size: 1.1em; }
-    }
-  </style>
-</head>
-<body>
-  <div class="top-bar">
-    <a href="index.html" class="back-btn" title="Back to Home">⬅️ Home</a>
+   
+    <div id="chapter1" class="chapter">
+      <a href="#toc" class="back-to-toc-btn" title="Back to Table of Contents">⬅️ Back to Contents</a>
+      <div class="chapter-title">CHAPTER ONE: When I First Saw the Stars</div>
+      
   </div>
-  <div class="container">
-    <div class="confetti">
-      <div class="dot dot1"></div>
-      <div class="dot dot2"></div>
-      <div class="dot dot3"></div>
-      <div class="dot dot4"></div>
-      <div class="dot dot5"></div>
-    </div>
-    <div class="title-area">
-    
+</body>
+</html>    
     <!-- CHAPTER 1 -->
     <div id="chapter1" class="chapter">
       <div class="chapter-title">CHAPTER ONE: When I First Saw the Stars</div>
