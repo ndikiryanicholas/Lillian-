@@ -313,6 +313,38 @@
       <li><a href="index2.html#chapter20">Uptown Girl, Downtown Forever</a></li>
     </ol>
   </section>
-  
+  <!-- Floating "Go to Part 2" Button (for index.html) -->
+<style>
+  #go-to-index2-btn {
+    position: fixed;
+    bottom: 90px; /* slightly above the other floating button */
+    right: 32px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background: #2980b9;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.65em 1.3em;
+    font-size: 1.05em;
+    box-shadow: 0 2px 8px rgba(41,128,185,0.13);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    opacity: 0.93;
+  }
+  #go-to-index2-btn:hover {
+    background: #21618c;
+    box-shadow: 0 4px 16px rgba(41,128,185,0.18);
+    opacity: 1;
+  }
+  #go-to-index2-btn .icon {
+    margin-right: 0.5em;
+    font-size: 1.2em;
+  }
+</style>
+<button id="go-to-index2-btn" onclick="window.location.href='index2.html';">
+  <span class="icon">📚</span> read
+</button>
 </body>
 </html>
