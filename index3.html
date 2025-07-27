@@ -2135,4 +2135,37 @@
       “I felt in love with the shadow… but I rose in the light.” 🌤️
     </blockquote>
   </div>
+    <!-- Floating "Back to Contents" Button -->
+<style>
+  #back-to-toc-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.65em 1.3em;
+    font-size: 1.05em;
+    box-shadow: 0 2px 8px rgba(44,62,80,0.1);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    opacity: 0.93;
+  }
+  #back-to-toc-btn:hover {
+    background: #34495e;
+    box-shadow: 0 4px 16px rgba(44,62,80,0.18);
+    opacity: 1;
+  }
+  #back-to-toc-btn .icon {
+    margin-right: 0.5em;
+    font-size: 1.2em;
+  }
+</style>
+<button id="back-to-toc-btn" onclick="document.getElementById('toc').scrollIntoView({behavior: 'smooth'});">
+  <span class="icon">⬆️</span> Back to Contents
+</button>
 </section>
