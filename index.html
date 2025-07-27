@@ -283,8 +283,38 @@
       <li><a href="index2.html#chapter20">Uptown Girl, Downtown Forever</a></li>
     </ol>
   </section>
-  <a href="index2.html" class="floating-btn" title="Go to The Up-Town Girl">
-    <span>➡️</span> Read The Up-Town Girl
-  </a>
+  <!-- Floating "Go to Full Contents" Button (for index.html) -->
+<style>
+  #go-to-index3-btn {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.65em 1.3em;
+    font-size: 1.05em;
+    box-shadow: 0 2px 8px rgba(39,174,96,0.13);
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    opacity: 0.93;
+  }
+  #go-to-index3-btn:hover {
+    background: #219150;
+    box-shadow: 0 4px 16px rgba(39,174,96,0.18);
+    opacity: 1;
+  }
+  #go-to-index3-btn .icon {
+    margin-right: 0.5em;
+    font-size: 1.2em;
+  }
+</style>
+<button id="go-to-index3-btn" onclick="window.location.href='index3.html';">
+  <span class="icon">📖</span> Go to Full Contents
+</button>
 </body>
 </html>
