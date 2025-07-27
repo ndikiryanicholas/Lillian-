@@ -165,8 +165,40 @@
       background: #ff69b4;
       color: #fff;
     }
+    /* Floating Back Button */
+    .floating-back-btn {
+      position: fixed;
+      left: 2.2em;
+      bottom: 2.2em;
+      background: #6c63ff;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 1em 1.3em;
+      font-size: 1.08em;
+      font-family: inherit;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(108, 99, 255, 0.18);
+      transition: background 0.2s, transform 0.2s;
+      z-index: 100;
+      outline: none;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+    }
+    .floating-back-btn:hover {
+      background: #ff69b4;
+      color: #fff;
+      transform: scale(1.07);
+    }
+    .floating-back-btn span {
+      font-size: 1.25em;
+      margin-right: 0.3em;
+    }
     @media (max-width: 800px) {
       .container { padding: 1.1em 0.2em 2em 0.2em; }
+      .floating-back-btn { left: 1em; bottom: 1em; padding: 0.8em 1em; font-size: 0.97em;}
     }
     @media (max-width: 600px) {
       h1 { font-size: 1.3em; }
@@ -176,6 +208,9 @@
   </style>
 </head>
 <body>
+  <a href="index.html" class="floating-back-btn" title="Back to Home">
+    <span>⬅️</span> Home
+  </a>
   <div class="container">
     <h1>💡 I Felt in Love with the Shadow</h1>
     <div class="subtitle">
@@ -276,7 +311,7 @@
       </ol>
     </section>
 
-    <!-- Example starting chapters (add more as desired) -->
+    <!-- Example starting chapters, continue as needed -->
     <div id="chapter1">
       <a href="#toc" class="back-to-toc-btn" title="Back to Table of Contents">⬅️ Back to Contents</a>
       <div class="chapter-title">Chapter 1: The Spark in the Silence</div>
@@ -295,4 +330,4 @@
     <!-- Add more chapters as <div id="chapter2"> ... </div>, etc. -->
   </div>
 </body>
-  </html>
+              </html>
