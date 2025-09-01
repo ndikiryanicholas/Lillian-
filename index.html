@@ -8,11 +8,24 @@
   <meta property="og:title" content="Lillian & Nicholas">
   <meta property="og:description" content="Built with vibes and vision. This is Lillian & Nicholas — just two curious minds building cool stuff and sharing our vibe.">
   <meta property="og:image" content="https://i.postimg.cc/TPvmgW3W/IMG-20250111-WA0013.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary-color: #ff69b4;
+      --secondary-color: #6c63ff;
+      --background-gradient: linear-gradient(135deg, #fce9ff 0%, #e0c3fc 100%);
+      --text-dark: #333;
+      --text-light: #555;
+      --box-shadow-light: 0 4px 18px rgba(255, 105, 180, 0.15), 0 1.5px 8px #ffd6e3;
+      --box-shadow-hover: 0 8px 32px rgba(255, 105, 180, 0.22), 0 4px 16px #ffd6e3;
+    }
+
     body {
-      font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
-      background: linear-gradient(135deg, #fdf6fd 0%, #e0c3fc 100%);
-      color: #333;
+      font-family: 'Poppins', sans-serif;
+      background: var(--background-gradient);
+      color: var(--text-dark);
       margin: 0;
       min-height: 100vh;
       display: flex;
@@ -20,13 +33,15 @@
       align-items: center;
       justify-content: flex-start;
       overflow-x: hidden;
+      line-height: 1.6;
     }
+
     .intro {
       text-align: center;
       background: #fff;
       padding: 2.5rem 2rem 2rem 2rem;
       border-radius: 20px;
-      box-shadow: 0 4px 18px rgba(255, 105, 180, 0.15), 0 1.5px 8px #ffd6e3;
+      box-shadow: var(--box-shadow-light);
       max-width: 420px;
       margin: 2rem;
       position: relative;
@@ -34,71 +49,51 @@
       animation: popIn 1s cubic-bezier(.53,1.57,.71,.96);
     }
     @keyframes popIn {
-      0% {
-        transform: scale(0.8) rotate(-8deg);
-        opacity: 0;
-      }
-      60% {
-        transform: scale(1.05) rotate(2deg);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1) rotate(0);
-        opacity: 1;
-      }
+      0% { transform: scale(0.8) rotate(-8deg); opacity: 0; }
+      60% { transform: scale(1.05) rotate(2deg); opacity: 1; }
+      100% { transform: scale(1) rotate(0); opacity: 1; }
     }
     .intro img {
       border-radius: 16px;
-      max-width: 100%;
+      width: 100%;
       height: auto;
       margin-bottom: 1.2rem;
       box-shadow: 0 2px 8px #ffd6e3;
       animation: imgFloat 2.5s ease-in-out 0.5s both;
     }
     @keyframes imgFloat {
-      0% {
-        transform: translateY(30px) scale(0.95) rotate(-5deg);
-        opacity: 0;
-      }
-      80% {
-        transform: translateY(-6px) scale(1.025) rotate(3deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0) scale(1) rotate(0);
-        opacity: 1;
-      }
+      0% { transform: translateY(30px) scale(0.95) rotate(-5deg); opacity: 0; }
+      80% { transform: translateY(-6px) scale(1.025) rotate(3deg); opacity: 1; }
+      100% { transform: translateY(0) scale(1) rotate(0); opacity: 1; }
     }
     .intro h1 {
-      font-size: 2.2rem;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 2.5rem;
       margin: 0.2rem 0 0.5rem 0;
       letter-spacing: 1px;
-      color: #ff69b4;
+      color: var(--primary-color);
       animation: fadeInUp 1.1s 0.7s both;
     }
     .intro h2 {
-      font-size: 1.3rem;
-      color: #6c63ff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4rem;
+      color: var(--secondary-color);
       margin-bottom: 1rem;
       font-weight: 600;
       animation: fadeInUp 1.1s 0.95s both;
     }
     .intro p {
-      font-size: 1.08rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
       line-height: 1.7;
       margin: 0 auto;
-      color: #555;
+      color: var(--text-light);
       animation: fadeInUp 1.1s 1.2s both;
+      max-width: 350px;
     }
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
     .confetti {
       position: absolute;
@@ -114,7 +109,7 @@
     }
     .dot1 { width: 16px; height: 16px; background: #fcb0fd; left: 10%; top: 12%; animation-delay: 0s;}
     .dot2 { width: 12px; height: 12px; background: #6c63ff; left: 80%; top: 18%; animation-delay: 1s;}
-    .dot3 { width: 9px;  height: 9px;  background: #ffd6e3; left: 20%; top: 70%; animation-delay: 2.2s;}
+    .dot3 { width: 9px; height: 9px; background: #ffd6e3; left: 20%; top: 70%; animation-delay: 2.2s;}
     .dot4 { width: 14px; height: 14px; background: #ff69b4; left: 60%; top: 80%; animation-delay: 3.1s;}
     .dot5 { width: 10px; height: 10px; background: #b2f7ef; left: 50%; top: 45%; animation-delay: 1.5s;}
     @keyframes floatDot {
@@ -124,7 +119,7 @@
       100% { transform: translateY(0) scale(1);}
     }
     .intro:hover {
-      box-shadow: 0 8px 32px rgba(255, 105, 180, 0.22), 0 4px 16px #ffd6e3;
+      box-shadow: var(--box-shadow-hover);
       transform: scale(1.018);
       transition: box-shadow 0.3s, transform 0.3s;
     }
@@ -142,7 +137,7 @@
       border-radius: 16px;
       box-shadow: 0 2px 10px #efd1f1;
       padding: 1.5em 1.3em 1.6em 1.3em;
-      font-family: inherit;
+      font-family: 'Poppins', sans-serif;
       font-size: 1.07em;
       color: #444;
       position: relative;
@@ -152,7 +147,7 @@
     }
     .toc-section h3 {
       margin-top: 0;
-      color: #ff69b4;
+      color: var(--primary-color);
       font-size: 1.1em;
       letter-spacing: 0.5px;
       margin-bottom: 0.7em;
@@ -161,22 +156,27 @@
     .toc-section ol {
       padding-left: 1.4em;
       margin: 0;
+      list-style-type: none; /* Removed default list style */
     }
     .toc-section li {
-      margin-bottom: 0.33em;
-      line-height: 1.4;
+      margin-bottom: 0.8em;
+      line-height: 1.6;
+      border-left: 3px solid transparent; /* Added a subtle line effect */
+      transition: border-left-color 0.2s, background-color 0.2s;
+      padding-left: 0.5em;
+    }
+    .toc-section li:hover {
+      border-left-color: var(--primary-color);
+      background-color: #f3eaff;
+      transform: translateX(5px);
     }
     .toc-section a {
-      color: #6c63ff;
+      color: var(--secondary-color);
       text-decoration: none;
       transition: color 0.16s;
-      border-radius: 5px;
-      padding: 1px 4px;
-      cursor: pointer;
     }
     .toc-section a:hover {
-      color: #ff69b4;
-      background: #f3eaff;
+      color: var(--primary-color);
     }
 
     /* Floating button style */
@@ -184,13 +184,13 @@
       position: fixed;
       right: 2.2em;
       bottom: 2.2em;
-      background: #6c63ff;
+      background: var(--secondary-color);
       color: #fff;
       border: none;
       border-radius: 50px;
       padding: 1em 1.3em;
       font-size: 1.08em;
-      font-family: inherit;
+      font-family: 'Poppins', sans-serif;
       cursor: pointer;
       box-shadow: 0 4px 18px rgba(108, 99, 255, 0.18);
       transition: background 0.2s, transform 0.2s;
@@ -202,7 +202,7 @@
       gap: 0.5em;
     }
     .floating-btn:hover {
-      background: #ff69b4;
+      background: var(--primary-color);
       color: #fff;
       transform: scale(1.07);
     }
@@ -210,6 +210,24 @@
       font-size: 1.25em;
       margin-right: 0.3em;
     }
+
+    /* Mobile adjustments */
+    @media (max-width: 500px) {
+      .intro, .toc-section {
+        margin: 1rem;
+        padding: 1.5rem 1rem;
+      }
+      .intro h1 { font-size: 2rem; }
+      .intro h2 { font-size: 1.2rem; }
+      .intro p { font-size: 1rem; }
+      .floating-btn {
+        right: 1em;
+        bottom: 1em;
+        padding: 0.8em 1em;
+        font-size: 0.9em;
+      }
+    }
+    
   </style>
 </head>
 <body>
@@ -252,101 +270,40 @@
     <li><a href="index3.html#chapter19">Light After Shadow</a></li>
     <li><a href="index3.html#chapter20">Real Love Waits in Truth</a></li>
   </ol>
-  <!-- Floating "Go to Full Contents" Button (for index.html) -->
-<style>
-  #go-to-index3-btn {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    background: #27ae60;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 0.65em 1.3em;
-    font-size: 1.05em;
-    box-shadow: 0 2px 8px rgba(39,174,96,0.13);
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    opacity: 0.93;
-  }
-  #go-to-index3-btn:hover {
-    background: #219150;
-    box-shadow: 0 4px 16px rgba(39,174,96,0.18);
-    opacity: 1;
-  }
-  #go-to-index3-btn .icon {
-    margin-right: 0.5em;
-    font-size: 1.2em;
-  }
-</style>
-<button id="go-to-index3-btn" onclick="window.location.href='index3.html';">
-  <span class="icon">📖</span> Go to Full Contents
-</button>
 </section>
 
-  <section class="toc-section">
-    <h3>📚 Table of Contents 
-    Up Town Girl</h3>
-    <ol>
-      <li><a href="index2.html#chapter1">When I First Saw the Stars</a></li>
-      <li><a href="index2.html#chapter2">Two Worlds Apart</a></li>
-      <li><a href="index2.html#chapter3">Her Smile, My Silence</a></li>
-      <li><a href="index2.html#chapter4">Coffee, Class, and Crushed Dreams</a></li>
-      <li><a href="index2.html#chapter5">Her Name Was Light</a></li>
-      <li><a href="index2.html#chapter6">Darkness Can't Love Stars, Right?</a></li>
-      <li><a href="index2.html#chapter7">She Spoke to Me… Finally</a></li>
-      <li><a href="index2.html#chapter8">Hidden Notes and Broken Roads</a></li>
-      <li><a href="index2.html#chapter9">Uptown Secrets, Downtown Pain</a></li>
-      <li><a href="index2.html#chapter10">Why Would She Choose Me?</a></li>
-      <li><a href="index2.html#chapter11">The Night She Shined For Me</a></li>
-      <li><a href="index2.html#chapter12">I Felt Like I Belonged… Until I Didn’t</a></li>
-      <li><a href="index2.html#chapter13">They Tried to Break Us</a></li>
-      <li><a href="index2.html#chapter14">The Truth Behind Her Tears</a></li>
-      <li><a href="index2.html#chapter15">She Left Without Goodbye</a></li>
-      <li><a href="index2.html#chapter16">Pain That Taught Me to Rise</a></li>
-      <li><a href="index2.html#chapter17">Letters From the Past</a></li>
-      <li><a href="index2.html#chapter18">When We Met Again</a></li>
-      <li><a href="index2.html#chapter19">The Darkness That Learned to Shine</a></li>
-      <li><a href="index2.html#chapter20">Uptown Girl, Downtown Forever</a></li>
-    </ol>
-   
-  </section>
-  <!-- Floating "Go to Part 2" Button (for index.html) -->
-<style>
-  #go-to-index2-btn {
-    position: fixed;
-    bottom: 90px; /* slightly above the other floating button */
-    right: 32px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    background: #2980b9;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 0.65em 1.3em;
-    font-size: 1.05em;
-    box-shadow: 0 2px 8px rgba(41,128,185,0.13);
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    opacity: 0.93;
-  }
-  #go-to-index2-btn:hover {
-    background: #21618c;
-    box-shadow: 0 4px 16px rgba(41,128,185,0.18);
-    opacity: 1;
-  }
-  #go-to-index2-btn .icon {
-    margin-right: 0.5em;
-    font-size: 1.2em;
-  }
-</style>
-<button id="go-to-index2-btn" onclick="window.location.href='index2.html';">
-  <span class="icon">📚</span> read
-</button>
+<section class="toc-section">
+  <h3>📚 Table of Contents 
+  Up Town Girl</h3>
+  <ol>
+    <li><a href="index2.html#chapter1">When I First Saw the Stars</a></li>
+    <li><a href="index2.html#chapter2">Two Worlds Apart</a></li>
+    <li><a href="index2.html#chapter3">Her Smile, My Silence</a></li>
+    <li><a href="index2.html#chapter4">Coffee, Class, and Crushed Dreams</a></li>
+    <li><a href="index2.html#chapter5">Her Name Was Light</a></li>
+    <li><a href="index2.html#chapter6">Darkness Can't Love Stars, Right?</a></li>
+    <li><a href="index2.html#chapter7">She Spoke to Me… Finally</a></li>
+    <li><a href="index2.html#chapter8">Hidden Notes and Broken Roads</a></li>
+    <li><a href="index2.html#chapter9">Uptown Secrets, Downtown Pain</a></li>
+    <li><a href="index2.html#chapter10">Why Would She Choose Me?</a></li>
+    <li><a href="index2.html#chapter11">The Night She Shined For Me</a></li>
+    <li><a href="index2.html#chapter12">I Felt Like I Belonged… Until I Didn’t</a></li>
+    <li><a href="index2.html#chapter13">They Tried to Break Us</a></li>
+    <li><a href="index2.html#chapter14">The Truth Behind Her Tears</a></li>
+    <li><a href="index2.html#chapter15">She Left Without Goodbye</a></li>
+    <li><a href="index2.html#chapter16">Pain That Taught Me to Rise</a></li>
+    <li><a href="index2.html#chapter17">Letters From the Past</a></li>
+    <li><a href="index2.html#chapter18">When We Met Again</a></li>
+    <li><a href="index2.html#chapter19">The Darkness That Learned to Shine</a></li>
+    <li><a href="index2.html#chapter20">Uptown Girl, Downtown Forever</a></li>
+  </ol>
+</section>
+  
+<a href="index3.html" class="floating-btn" id="go-to-index3-btn">
+  <span class="icon">📖</span> Go to Full Contents
+</a>
+<a href="index2.html" class="floating-btn" id="go-to-index2-btn">
+  <span class="icon">📚</span> Read
+</a>
 </body>
 </html>
-
