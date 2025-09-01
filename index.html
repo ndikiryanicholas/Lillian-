@@ -63,51 +63,6 @@
       80% { transform: translateY(-6px) scale(1.025) rotate(3deg); opacity: 1; }
       100% { transform: translateY(0) scale(1) rotate(0); opacity: 1; }
     }
-    .intro h1 {
-      font-size: 2.2rem;
-      margin: 0.2rem 0 0.5rem 0;
-      letter-spacing: 1px;
-      color: #ff69b4;
-      animation: fadeInUp 1.1s 0.7s both;
-    }
-    .intro h2 {
-      font-size: 1.3rem;
-      color: #6c63ff;
-      margin-bottom: 1rem;
-      font-weight: 600;
-      animation: fadeInUp 1.1s 0.95s both;
-    }
-    .intro p {
-      font-size: 1.08rem;
-      line-height: 1.7;
-      margin: 0 auto;
-      color: #555;
-      animation: fadeInUp 1.1s 1.2s both;
-    }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    .confetti {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .dot {
-      position: absolute; border-radius: 50%; opacity: 0.7;
-      animation: floatDot 5s linear infinite;
-    }
-    .dot1 { width: 16px; height: 16px; background: #fcb0fd; left: 10%; top: 12%; animation-delay: 0s; }
-    .dot2 { width: 12px; height: 12px; background: #6c63ff; left: 80%; top: 18%; animation-delay: 1s; }
-    .dot3 { width: 9px;  height: 9px;  background: #ffd6e3; left: 20%; top: 70%; animation-delay: 2.2s; }
-    .dot4 { width: 14px; height: 14px; background: #ff69b4; left: 60%; top: 80%; animation-delay: 3.1s; }
-    .dot5 { width: 10px; height: 10px; background: #b2f7ef; left: 50%; top: 45%; animation-delay: 1.5s; }
-    @keyframes floatDot {
-      0% { transform: translateY(0) scale(1); }
-      20% { transform: translateY(-8px) scale(1.1); }
-      50% { transform: translateY(8px) scale(0.92); }
-      100% { transform: translateY(0) scale(1); }
-    }
     .intro:hover {
       box-shadow: 0 8px 32px rgba(255, 105, 180, 0.22), 0 4px 16px #ffd6e3;
       transform: scale(1.018);
@@ -116,6 +71,34 @@
     .intro:hover img {
       filter: brightness(1.07) saturate(1.2);
       transition: filter 0.3s;
+    }
+    
+    /* Styles for the intro description */
+    .description {
+      text-align: center;
+      width: min(92vw, var(--page-max));
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .description h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      color: #ff69b4;
+    }
+    .description h2 {
+      margin: 0 0 16px;
+      font-size: clamp(18px, 2.2vw, 22px);
+      font-weight: 600;
+      color: #6c63ff;
+    }
+    .description p {
+      margin: 0 auto;
+      font-size: clamp(15px, 1.6vw, 18px);
+      line-height: 1.75;
+      color: #555;
+      max-width: 60ch;
     }
 
     /* Table of Contents Section */
@@ -162,7 +145,7 @@
       color: #ff69b4;
       background: #f3eaff;
     }
-
+    
     /* Floating button style */
     #go-to-index3-btn {
       background: #27ae60;
@@ -218,34 +201,7 @@
       margin-right: 0.5em;
       font-size: 1.2em;
     }
-    
-    /* Styles for the intro description */
-    .description {
-      text-align: center;
-      width: min(92vw, var(--page-max));
-      padding: 24px;
-      margin-bottom: 24px;
-    }
-    .description h1 {
-      margin: 0 0 8px;
-      font-size: clamp(28px, 4vw, 40px);
-      font-weight: 600;
-      letter-spacing: 0.2px;
-      color: #ff69b4;
-    }
-    .description h2 {
-      margin: 0 0 16px;
-      font-size: clamp(18px, 2.2vw, 22px);
-      font-weight: 600;
-      color: #6c63ff;
-    }
-    .description p {
-      margin: 0 auto;
-      font-size: clamp(15px, 1.6vw, 18px);
-      line-height: 1.75;
-      color: #555;
-      max-width: 60ch;
-    }
+
   </style>
 </head>
 <body>
@@ -257,7 +213,7 @@
       <div class="dot dot4"></div>
       <div class="dot dot5"></div>
     </div>
-    <img src="https://i.postimg.cc/TPvmgW3W/IMG-20250111-WA0013.jpg" alt="Sample project image">
+    <img src="https://images.unsplash.com/photo-1549497554-4734d5d4d388?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Two people sitting on a staircase">
   </section>
 
   <section class="description">
