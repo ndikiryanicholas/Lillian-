@@ -14,7 +14,7 @@
       background: linear-gradient(135deg, #fdf6fd 0%, #e0c3fc 100%);
       color: #333;
       margin: 0;
-      min-height: 100vh;
+      min-height: 10vh;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -210,6 +210,64 @@
       font-size: 1.25em;
       margin-right: 0.3em;
     }
+    
+    /* Corrected Floating "Go to Full Contents" Button */
+    #go-to-index3-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px; /* Position on the right */
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      background: #27ae60;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.65em 1.3em;
+      font-size: 1.05em;
+      box-shadow: 0 2px 8px rgba(39,174,96,0.13);
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      opacity: 0.93;
+    }
+    #go-to-index3-btn:hover {
+      background: #219150;
+      box-shadow: 0 4px 16px rgba(39,174,96,0.18);
+      opacity: 1;
+    }
+    #go-to-index3-btn .icon {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+    }
+
+    /* Corrected Floating "read" Button */
+    #go-to-index2-btn {
+      position: fixed;
+      bottom: 32px;
+      left: 32px; /* Position on the left */
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      background: #2980b9;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.65em 1.3em;
+      font-size: 1.05em;
+      box-shadow: 0 2px 8px rgba(41,128,185,0.13);
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      opacity: 0.93;
+    }
+    #go-to-index2-btn:hover {
+      background: #21618c;
+      box-shadow: 0 4px 16px rgba(41,128,185,0.18);
+      opacity: 1;
+    }
+    #go-to-index2-btn .icon {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+    }
   </style>
 </head>
 <body>
@@ -227,69 +285,34 @@
     <p>We’re Lillian & Nicholas — partners in curiosity, creativity, and growth. Every idea we chase and every project we build comes from a love of creating something meaningful. This space is about learning, exploring, and growing together with you.</p>
   </section>
  
-<section class="toc-section">
-  <h3>📚 Table of Contents
-  i felt in love with the shadow</h3>
-  <ol>
-    <li><a href="index3.html#chapter1">The Spark in the Silence</a></li>
-    <li><a href="index3.html#chapter2">Eyes That Lied in Kindness</a></li>
-    <li><a href="index3.html#chapter3">When Texts Felt Like Touch</a></li>
-    <li><a href="index3.html#chapter4">She Called Me “Forever”</a></li>
-    <li><a href="index3.html#chapter5">The Cracks Behind Her Smile</a></li>
-    <li><a href="index3.html#chapter6">My Heart, Her Stage</a></li>
-    <li><a href="index3.html#chapter7">Loving a Ghost</a></li>
-    <li><a href="index3.html#chapter8">The Nights I Prayed for Her</a></li>
-    <li><a href="index3.html#chapter9">Whispers from Friends I Ignored</a></li>
-    <li><a href="index3.html#chapter10">When Her Truth Broke Me</a></li>
-    <li><a href="index3.html#chapter11">I Still Said I Loved Her</a></li>
-    <li><a href="index3.html#chapter12">Conversations with God</a></li>
-    <li><a href="index3.html#chapter13">Alone but Not Empty</a></li>
-    <li><a href="index3.html#chapter14">Letters I Never Sent</a></li>
-    <li><a href="index3.html#chapter15">Dreams vs. Reality</a></li>
-    <li><a href="index3.html#chapter16">Why Did She Pretend?</a></li>
-    <li><a href="index3.html#chapter17">The Moment I Let Go</a></li>
-    <li><a href="index3.html#chapter18">Healing in Pieces</a></li>
-    <li><a href="index3.html#chapter19">Light After Shadow</a></li>
-    <li><a href="index3.html#chapter20">Real Love Waits in Truth</a></li>
-  </ol>
-  <!-- Floating "Go to Full Contents" Button (for index.html) -->
-<style>
-  #go-to-index3-btn {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    background: #27ae60;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 0.65em 1.3em;
-    font-size: 1.05em;
-    box-shadow: 0 2px 8px rgba(39,174,96,0.13);
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    opacity: 0.93;
-  }
-  #go-to-index3-btn:hover {
-    background: #219150;
-    box-shadow: 0 4px 16px rgba(39,174,96,0.18);
-    opacity: 1;
-  }
-  #go-to-index3-btn .icon {
-    margin-right: 0.5em;
-    font-size: 1.2em;
-  }
-</style>
-<button id="go-to-index3-btn" onclick="window.location.href='index3.html';">
-  <span class="icon">📖</span> Go to Full Contents
-</button>
-</section>
+  <section class="toc-section">
+    <h3>📚 Table of Contents i felt in love with the shadow</h3>
+    <ol>
+      <li><a href="index3.html#chapter1">The Spark in the Silence</a></li>
+      <li><a href="index3.html#chapter2">Eyes That Lied in Kindness</a></li>
+      <li><a href="index3.html#chapter3">When Texts Felt Like Touch</a></li>
+      <li><a href="index3.html#chapter4">She Called Me “Forever”</a></li>
+      <li><a href="index3.html#chapter5">The Cracks Behind Her Smile</a></li>
+      <li><a href="index3.html#chapter6">My Heart, Her Stage</a></li>
+      <li><a href="index3.html#chapter7">Loving a Ghost</a></li>
+      <li><a href="index3.html#chapter8">The Nights I Prayed for Her</a></li>
+      <li><a href="index3.html#chapter9">Whispers from Friends I Ignored</a></li>
+      <li><a href="index3.html#chapter10">When Her Truth Broke Me</a></li>
+      <li><a href="index3.html#chapter11">I Still Said I Loved Her</a></li>
+      <li><a href="index3.html#chapter12">Conversations with God</a></li>
+      <li><a href="index3.html#chapter13">Alone but Not Empty</a></li>
+      <li><a href="index3.html#chapter14">Letters I Never Sent</a></li>
+      <li><a href="index3.html#chapter15">Dreams vs. Reality</a></li>
+      <li><a href="index3.html#chapter16">Why Did She Pretend?</a></li>
+      <li><a href="index3.html#chapter17">The Moment I Let Go</a></li>
+      <li><a href="index3.html#chapter18">Healing in Pieces</a></li>
+      <li><a href="index3.html#chapter19">Light After Shadow</a></li>
+      <li><a href="index3.html#chapter20">Real Love Waits in Truth</a></li>
+    </ol>
+  </section>
 
   <section class="toc-section">
-    <h3>📚 Table of Contents 
-    Up Town Girl</h3>
+    <h3>📚 Table of Contents Up Town Girl</h3>
     <ol>
       <li><a href="index2.html#chapter1">When I First Saw the Stars</a></li>
       <li><a href="index2.html#chapter2">Two Worlds Apart</a></li>
@@ -312,40 +335,13 @@
       <li><a href="index2.html#chapter19">The Darkness That Learned to Shine</a></li>
       <li><a href="index2.html#chapter20">Uptown Girl, Downtown Forever</a></li>
     </ol>
-   
   </section>
-  <!-- Floating "Go to Part 2" Button (for index.html) -->
-<style>
-  #go-to-index2-btn {
-    position: fixed;
-    bottom: 90px; /* slightly above the other floating button */
-    right: 32px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    background: #2980b9;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 0.65em 1.3em;
-    font-size: 1.05em;
-    box-shadow: 0 2px 8px rgba(41,128,185,0.13);
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    opacity: 0.93;
-  }
-  #go-to-index2-btn:hover {
-    background: #21618c;
-    box-shadow: 0 4px 16px rgba(41,128,185,0.18);
-    opacity: 1;
-  }
-  #go-to-index2-btn .icon {
-    margin-right: 0.5em;
-    font-size: 1.2em;
-  }
-</style>
-<button id="go-to-index2-btn" onclick="window.location.href='index2.html';">
-  <span class="icon">📚</span> read
-</button>
+
+  <button id="go-to-index3-btn" onclick="window.location.href='index3.html';">
+    <span class="icon">📖</span> Go to Full Contents
+  </button>
+  <button id="go-to-index2-btn" onclick="window.location.href='index2.html';">
+    <span class="icon">📚</span> read
+  </button>
 </body>
-        </html>
+</html>
