@@ -8,18 +8,31 @@
   <meta property="og:title" content="Lillian & Nicholas">
   <meta property="og:description" content="Built with vibes and vision. This is Lillian & Nicholas — just two curious minds building cool stuff and sharing our vibe.">
   <meta property="og:image" content="https://i.postimg.cc/TPvmgW3W/IMG-20250111-WA0013.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
   <style>
-    body {
+    :root {
+      --text-strong: #222;
+      --text-muted: #555;
+      --page-max: 720px;
+    }
+    * { 
+      box-sizing: border-box; 
       font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+    }
+    html, body { height: 100%; margin: 0; }
+    body {
       background: linear-gradient(135deg, #fdf6fd 0%, #e0c3fc 100%);
-      color: #333;
-      margin: 0;
+      color: var(--text-strong);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       overflow-x: hidden;
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     }
     .intro {
       text-align: center;
@@ -34,18 +47,9 @@
       animation: popIn 1s cubic-bezier(.53,1.57,.71,.96);
     }
     @keyframes popIn {
-      0% {
-        transform: scale(0.8) rotate(-8deg);
-        opacity: 0;
-      }
-      60% {
-        transform: scale(1.05) rotate(2deg);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1) rotate(0);
-        opacity: 1;
-      }
+      0% { transform: scale(0.8) rotate(-8deg); opacity: 0; }
+      60% { transform: scale(1.05) rotate(2deg); opacity: 1; }
+      100% { transform: scale(1) rotate(0); opacity: 1; }
     }
     .intro img {
       border-radius: 16px;
@@ -56,18 +60,9 @@
       animation: imgFloat 2.5s ease-in-out 0.5s both;
     }
     @keyframes imgFloat {
-      0% {
-        transform: translateY(30px) scale(0.95) rotate(-5deg);
-        opacity: 0;
-      }
-      80% {
-        transform: translateY(-6px) scale(1.025) rotate(3deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(0) scale(1) rotate(0);
-        opacity: 1;
-      }
+      0% { transform: translateY(30px) scale(0.95) rotate(-5deg); opacity: 0; }
+      80% { transform: translateY(-6px) scale(1.025) rotate(3deg); opacity: 1; }
+      100% { transform: translateY(0) scale(1) rotate(0); opacity: 1; }
     }
     .intro h1 {
       font-size: 2.2rem;
@@ -91,37 +86,28 @@
       animation: fadeInUp 1.1s 1.2s both;
     }
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
     .confetti {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
       pointer-events: none;
       z-index: 0;
     }
     .dot {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.7;
+      position: absolute; border-radius: 50%; opacity: 0.7;
       animation: floatDot 5s linear infinite;
     }
-    .dot1 { width: 16px; height: 16px; background: #fcb0fd; left: 10%; top: 12%; animation-delay: 0s;}
-    .dot2 { width: 12px; height: 12px; background: #6c63ff; left: 80%; top: 18%; animation-delay: 1s;}
-    .dot3 { width: 9px;  height: 9px;  background: #ffd6e3; left: 20%; top: 70%; animation-delay: 2.2s;}
-    .dot4 { width: 14px; height: 14px; background: #ff69b4; left: 60%; top: 80%; animation-delay: 3.1s;}
-    .dot5 { width: 10px; height: 10px; background: #b2f7ef; left: 50%; top: 45%; animation-delay: 1.5s;}
+    .dot1 { width: 16px; height: 16px; background: #fcb0fd; left: 10%; top: 12%; animation-delay: 0s; }
+    .dot2 { width: 12px; height: 12px; background: #6c63ff; left: 80%; top: 18%; animation-delay: 1s; }
+    .dot3 { width: 9px;  height: 9px;  background: #ffd6e3; left: 20%; top: 70%; animation-delay: 2.2s; }
+    .dot4 { width: 14px; height: 14px; background: #ff69b4; left: 60%; top: 80%; animation-delay: 3.1s; }
+    .dot5 { width: 10px; height: 10px; background: #b2f7ef; left: 50%; top: 45%; animation-delay: 1.5s; }
     @keyframes floatDot {
-      0% { transform: translateY(0) scale(1);}
-      20% { transform: translateY(-8px) scale(1.1);}
-      50% { transform: translateY(8px) scale(0.92);}
-      100% { transform: translateY(0) scale(1);}
+      0% { transform: translateY(0) scale(1); }
+      20% { transform: translateY(-8px) scale(1.1); }
+      50% { transform: translateY(8px) scale(0.92); }
+      100% { transform: translateY(0) scale(1); }
     }
     .intro:hover {
       box-shadow: 0 8px 32px rgba(255, 105, 180, 0.22), 0 4px 16px #ffd6e3;
@@ -210,6 +196,60 @@
       font-size: 1.25em;
       margin-right: 0.3em;
     }
+    #go-to-index3-btn {
+      background: #27ae60;
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.65em 1.3em;
+      font-size: 1.05em;
+      box-shadow: 0 2px 8px rgba(39,174,96,0.13);
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      opacity: 0.93;
+    }
+    #go-to-index3-btn:hover {
+      background: #219150;
+      box-shadow: 0 4px 16px rgba(39,174,96,0.18);
+      opacity: 1;
+    }
+    #go-to-index3-btn .icon {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+    }
+    #go-to-index2-btn {
+      position: fixed;
+      bottom: 90px;
+      right: 32px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      background: #2980b9;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.65em 1.3em;
+      font-size: 1.05em;
+      box-shadow: 0 2px 8px rgba(41,128,185,0.13);
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      opacity: 0.93;
+    }
+    #go-to-index2-btn:hover {
+      background: #21618c;
+      box-shadow: 0 4px 16px rgba(41,128,185,0.18);
+      opacity: 1;
+    }
+    #go-to-index2-btn .icon {
+      margin-right: 0.5em;
+      font-size: 1.2em;
+    }
   </style>
 </head>
 <body>
@@ -222,134 +262,41 @@
       <div class="dot dot5"></div>
     </div>
     <img src="https://i.postimg.cc/TPvmgW3W/IMG-20250111-WA0013.jpg" alt="Sample project image">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lillian & Nicholas</title>
-  <meta name="description" content="We’re Lillian & Nicholas — partners in curiosity, creativity, and growth. Explore, learn, and grow with us." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --text-strong: #222;
-      --text-muted: #555;
-      --page-max: 720px;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text-strong);
-      background: #fff; /* simple clean background since you said just words */
-      display: grid;
-      place-items: center;
-    }
-    main {
-      width: min(92vw, var(--page-max));
-      text-align: center;
-      padding: 24px;
-    }
-    h1 {
-      margin: 0 0 8px;
-      font-size: clamp(28px, 4vw, 40px);
-      font-weight: 600;
-      letter-spacing: 0.2px;
-    }
-    h2 {
-      margin: 0 0 16px;
-      font-size: clamp(18px, 2.2vw, 22px);
-      font-weight: 600;
-      color: var(--text-muted);
-    }
-    p {
-      margin: 0 auto;
-      font-size: clamp(15px, 1.6vw, 18px);
-      line-height: 1.75;
-      color: #555;
-      max-width: 60ch;
-    }
-    /* Optional: gentle breathing animation for a premium feel; remove if you want 100% static */
-    .fade-in { opacity: 0; animation: fadeIn 700ms ease forwards; }
-    .fade-in.delay { animation-delay: 140ms; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }
-  </style>
-</head>
-<body>
-  <main>
-    <h1 class="fade-in">Lillian & Nicholas</h1>
-    <h2 class="fade-in delay">Two curious souls, creating with vision and sharing with heart.</h2>
-    <p class="fade-in delay" style="animation-delay: 260ms">
+    <h1>Lillian & Nicholas</h1>
+    <h2>Two curious souls, creating with vision and sharing with heart.</h2>
+    <p>
       We’re Lillian & Nicholas — partners in curiosity, creativity, and growth. Every idea we chase and every project we build comes from a love of creating something meaningful. This space is about learning, exploring, and growing together with you.
     </p>
-  </main>
-</body>
-  </html>
   </section>
- 
-<section class="toc-section">
-  <h3>📚 Table of Contents
-  i felt in love with the shadow</h3>
-  <ol>
-    <li><a href="index3.html#chapter1">The Spark in the Silence</a></li>
-    <li><a href="index3.html#chapter2">Eyes That Lied in Kindness</a></li>
-    <li><a href="index3.html#chapter3">When Texts Felt Like Touch</a></li>
-    <li><a href="index3.html#chapter4">She Called Me “Forever”</a></li>
-    <li><a href="index3.html#chapter5">The Cracks Behind Her Smile</a></li>
-    <li><a href="index3.html#chapter6">My Heart, Her Stage</a></li>
-    <li><a href="index3.html#chapter7">Loving a Ghost</a></li>
-    <li><a href="index3.html#chapter8">The Nights I Prayed for Her</a></li>
-    <li><a href="index3.html#chapter9">Whispers from Friends I Ignored</a></li>
-    <li><a href="index3.html#chapter10">When Her Truth Broke Me</a></li>
-    <li><a href="index3.html#chapter11">I Still Said I Loved Her</a></li>
-    <li><a href="index3.html#chapter12">Conversations with God</a></li>
-    <li><a href="index3.html#chapter13">Alone but Not Empty</a></li>
-    <li><a href="index3.html#chapter14">Letters I Never Sent</a></li>
-    <li><a href="index3.html#chapter15">Dreams vs. Reality</a></li>
-    <li><a href="index3.html#chapter16">Why Did She Pretend?</a></li>
-    <li><a href="index3.html#chapter17">The Moment I Let Go</a></li>
-    <li><a href="index3.html#chapter18">Healing in Pieces</a></li>
-    <li><a href="index3.html#chapter19">Light After Shadow</a></li>
-    <li><a href="index3.html#chapter20">Real Love Waits in Truth</a></li>
-  </ol>
-  <!-- Floating "Go to Full Contents" Button (for index.html) -->
-<style>
-  #go-to-index3-btn {
-    position: fixed;
-    bottom: 32px;
-    right: 32px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    background: #27ae60;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 0.65em 1.3em;
-    font-size: 1.05em;
-    box-shadow: 0 2px 8px rgba(39,174,96,0.13);
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    opacity: 0.93;
-  }
-  #go-to-index3-btn:hover {
-    background: #219150;
-    box-shadow: 0 4px 16px rgba(39,174,96,0.18);
-    opacity: 1;
-  }
-  #go-to-index3-btn .icon {
-    margin-right: 0.5em;
-    font-size: 1.2em;
-  }
-</style>
-<button id="go-to-index3-btn" onclick="window.location.href='index3.html';">
-  <span class="icon">📖</span> Go to Full Contents
-</button>
-</section>
 
   <section class="toc-section">
-    <h3>📚 Table of Contents 
-    Up Town Girl</h3>
+    <h3>📚 Table of Contents: i felt in love with the shadow</h3>
+    <ol>
+      <li><a href="index3.html#chapter1">The Spark in the Silence</a></li>
+      <li><a href="index3.html#chapter2">Eyes That Lied in Kindness</a></li>
+      <li><a href="index3.html#chapter3">When Texts Felt Like Touch</a></li>
+      <li><a href="index3.html#chapter4">She Called Me “Forever”</a></li>
+      <li><a href="index3.html#chapter5">The Cracks Behind Her Smile</a></li>
+      <li><a href="index3.html#chapter6">My Heart, Her Stage</a></li>
+      <li><a href="index3.html#chapter7">Loving a Ghost</a></li>
+      <li><a href="index3.html#chapter8">The Nights I Prayed for Her</a></li>
+      <li><a href="index3.html#chapter9">Whispers from Friends I Ignored</a></li>
+      <li><a href="index3.html#chapter10">When Her Truth Broke Me</a></li>
+      <li><a href="index3.html#chapter11">I Still Said I Loved Her</a></li>
+      <li><a href="index3.html#chapter12">Conversations with God</a></li>
+      <li><a href="index3.html#chapter13">Alone but Not Empty</a></li>
+      <li><a href="index3.html#chapter14">Letters I Never Sent</a></li>
+      <li><a href="index3.html#chapter15">Dreams vs. Reality</a></li>
+      <li><a href="index3.html#chapter16">Why Did She Pretend?</a></li>
+      <li><a href="index3.html#chapter17">The Moment I Let Go</a></li>
+      <li><a href="index3.html#chapter18">Healing in Pieces</a></li>
+      <li><a href="index3.html#chapter19">Light After Shadow</a></li>
+      <li><a href="index3.html#chapter20">Real Love Waits in Truth</a></li>
+    </ol>
+  </section>
+
+  <section class="toc-section">
+    <h3>📚 Table of Contents: Up Town Girl</h3>
     <ol>
       <li><a href="index2.html#chapter1">When I First Saw the Stars</a></li>
       <li><a href="index2.html#chapter2">Two Worlds Apart</a></li>
@@ -372,40 +319,13 @@
       <li><a href="index2.html#chapter19">The Darkness That Learned to Shine</a></li>
       <li><a href="index2.html#chapter20">Uptown Girl, Downtown Forever</a></li>
     </ol>
-   
   </section>
-  <!-- Floating "Go to Part 2" Button (for index.html) -->
-<style>
-  #go-to-index2-btn {
-    position: fixed;
-    bottom: 90px; /* slightly above the other floating button */
-    right: 32px;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    background: #2980b9;
-    color: #fff;
-    border: none;
-    border-radius: 50px;
-    padding: 0.65em 1.3em;
-    font-size: 1.05em;
-    box-shadow: 0 2px 8px rgba(41,128,185,0.13);
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    opacity: 0.93;
-  }
-  #go-to-index2-btn:hover {
-    background: #21618c;
-    box-shadow: 0 4px 16px rgba(41,128,185,0.18);
-    opacity: 1;
-  }
-  #go-to-index2-btn .icon {
-    margin-right: 0.5em;
-    font-size: 1.2em;
-  }
-</style>
-<button id="go-to-index2-btn" onclick="window.location.href='index2.html';">
-  <span class="icon">📚</span> read
-</button>
+
+  <button id="go-to-index3-btn" onclick="window.location.href='index3.html';">
+    <span class="icon">📖</span> Go to Full Contents
+  </button>
+  <button id="go-to-index2-btn" onclick="window.location.href='index2.html';">
+    <span class="icon">📚</span> read
+  </button>
 </body>
 </html>
