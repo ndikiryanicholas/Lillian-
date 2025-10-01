@@ -21,7 +21,6 @@
       overflow-x: hidden;
     }
 
-    /* Intro Section */
     .intro {
       text-align: center;
       background: #fff;
@@ -110,8 +109,14 @@
     .toc-section a { color: #6c63ff; text-decoration: none; transition: color 0.16s; border-radius: 5px; padding: 1px 4px; cursor: pointer; }
     .toc-section a:hover { color: #ff69b4; background: #f3eaff; }
 
+    /* "Now I Feel" Table of Contents special styling */
+    .toc { list-style: none; padding-left: 1.2em; margin: 0; }
+    .toc li { margin-bottom: 0.33em; line-height: 1.4; }
+    .toc a { color: #4a90e2; text-decoration: none; border-radius: 5px; padding: 1px 4px; transition: color 0.16s; cursor: pointer; }
+    .toc a:hover { color: #ff69b4; background: #e7eaff; }
+
     /* Floating Buttons */
-    #go-to-index3-btn, #go-to-index2-btn {
+    #go-to-index3-btn, #go-to-index2-btn, #go-to-index4-btn {
       position: fixed; bottom: 32px; z-index: 9999; display: flex; align-items: center; border: none; border-radius: 50px; padding: 0.65em 1.3em; font-size: 1.05em; cursor: pointer; opacity: 0.93; transition: background 0.2s, box-shadow 0.2s;
     }
     #go-to-index3-btn { right: 32px; background: #27ae60; color: #fff; box-shadow: 0 2px 8px rgba(39,174,96,0.13); }
@@ -120,6 +125,19 @@
     #go-to-index2-btn { left: 32px; background: #2980b9; color: #fff; box-shadow: 0 2px 8px rgba(41,128,185,0.13); }
     #go-to-index2-btn:hover { background: #21618c; box-shadow: 0 4px 16px rgba(41,128,185,0.18); opacity: 1; }
     #go-to-index2-btn .icon { margin-right: 0.5em; font-size: 1.2em; }
+    #go-to-index4-btn { left: 50%; transform: translateX(-50%); background: #ff69b4; color: #fff; box-shadow: 0 2px 8px rgba(255,105,180,0.13); margin-left: auto; margin-right: auto;}
+    #go-to-index4-btn:hover { background: #d43f8d; box-shadow: 0 4px 16px rgba(255,105,180,0.18); opacity: 1; }
+    #go-to-index4-btn .icon { margin-right: 0.5em; font-size: 1.2em; }
+    @media(max-width:900px) {
+      #go-to-index3-btn, #go-to-index2-btn, #go-to-index4-btn { font-size: 0.97em; padding: 0.5em 1em;}
+      #go-to-index3-btn, #go-to-index2-btn { bottom: 24px; }
+      #go-to-index4-btn { bottom: 72px; }
+    }
+    @media(max-width:700px) {
+      .intro { padding: 1.1rem 0.5rem 1rem 0.5rem; }
+      .toc-section { padding: 1em 0.6em 1.1em 0.6em; }
+      .marquee-track img { height: 70px; }
+    }
   </style>
 </head>
 <body>
@@ -132,38 +150,14 @@
       <div class="dot dot4"></div>
       <div class="dot dot5"></div>
     </div>
-
-    <!-- Smooth Marquee -->
     <div class="marquee">
       <div class="marquee-track">
         <img src="https://i.postimg.cc/13dY5Mz5/1758273145636.jpg" alt="Image 1">
         <img src="https://i.postimg.cc/0yjBshPB/1758273139051.jpg" alt="Image 2">
         <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Image 3">
-        <img src="https://i.postimg.cc/13dY5Mz5/1758273145636.jpg" alt="Image 1">
-        <img src="https://i.postimg.cc/0yjBshPB/1758273139051.jpg" alt="Image 2">
-        <img src="https://i.postimg.cc/13dY5Mz5/1758273145636.jpg" alt="Image 1">
-        <img src="https://i.postimg.cc/0yjBshPB/1758273139051.jpg" alt="Image 2">
-        <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Image 3">
-        <img src="https://i.postimg.cc/13dY5Mz5/1758273145636.jpg" alt="Image 1">
-        <img src="https://i.postimg.cc/0yjBshPB/1758273139051.jpg" alt="Image 2">
-        <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Image 3">
-        <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Image 3">
-        <img src="https://i.postimg.cc/13dY5Mz5/1758273145636.jpg" alt="Image 1">
-        <img src="https://i.postimg.cc/0yjBshPB/1758273139051.jpg" alt="Image 2">
-        <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Image 3">
-        <img src="https://i.postimg.cc/13dY5Mz5/1758273145636.jpg" alt="Image 1">
-        <img src="https://i.postimg.cc/0yjBshPB/1758273139051.jpg" alt="Image 2">
-        <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Image 3">
-        <img src="https://i.postimg.cc/13dY5Mz5/1758273145636.jpg" alt="Image 1">
-        <img src="https://i.postimg.cc/0yjBshPB/1758273139051.jpg" alt="Image 2">
-        <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Image 3">
-        <img src="https://i.postimg.cc/13dY5Mz5/1758273145636.jpg" alt="Image 1">
-        <img src="https://i.postimg.cc/0yjBshPB/1758273139051.jpg" alt="Image 2">
-        <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Image 3">
-
+        <!-- repeat as needed for marquee effect -->
       </div>
     </div>
-
     <img src="https://i.postimg.cc/SKz1X8XL/1758273122639.jpg" alt="Sample project image" class="main-img">
     <h1>Lillian & Nk</h1>
     <h2>Two curious souls, creating with vision and sharing with heart</h2>
@@ -222,22 +216,24 @@
       <li><a href="index2.html#chapter20">When Love Waits in the Light</a></li>
     </ol>
   </section>
-   <h2>Table of Contents</h2>
-    <ul class="toc">
-      <li><a href="#chapter1">1. When My Heart First Spoke</a></li>
-      <li><a href="#chapter2">2. The Tech Boy’s Heart</a></li>
-      <li><a href="#chapter3">3. Smiles Through the Screen</a></li>
-      <li><a href="#chapter4">4. Far but Near</a></li>
-      <li><a href="#chapter5">5. The Quiet in Between</a></li>
-      <li><a href="#chapter6">6. Dreams That Carry Her</a></li>
-      <li><a href="#chapter7">7. The Pain of Waiting</a></li>
-      <li><a href="#chapter8">8. Love in Shadows</a></li>
-      <li><a href="#chapter9">9. Now I Feel</a></li>
-      <li><a href="#chapter10">10. If She Reads This One Day</a></li>
-      <li><a href="#epilogue">Epilogue</a></li>
-      <li><a href="#conclusion">Conclusion</a></li>
-    </ul>
 
+  <section class="toc-section">
+    <h3>📚 Table of Contents Now I Feel</h3>
+    <ul class="toc">
+      <li><a href="index4.html#chapter1">1. When My Heart First Spoke</a></li>
+      <li><a href="index4.html#chapter2">2. The Tech Boy’s Heart</a></li>
+      <li><a href="index4.html#chapter3">3. Smiles Through the Screen</a></li>
+      <li><a href="index4.html#chapter4">4. Far but Near</a></li>
+      <li><a href="index4.html#chapter5">5. The Quiet in Between</a></li>
+      <li><a href="index4.html#chapter6">6. Dreams That Carry Her</a></li>
+      <li><a href="index4.html#chapter7">7. The Pain of Waiting</a></li>
+      <li><a href="index4.html#chapter8">8. Love in Shadows</a></li>
+      <li><a href="index4.html#chapter9">9. Now I Feel</a></li>
+      <li><a href="index4.html#chapter10">10. If She Reads This One Day</a></li>
+      <li><a href="index4.html#epilogue">Epilogue</a></li>
+      <li><a href="index4.html#conclusion">Conclusion</a></li>
+    </ul>
+  </section>
 
   <!-- Floating Buttons -->
   <button id="go-to-index3-btn" onclick="window.location.href='index3.html'">
@@ -246,10 +242,9 @@
   <button id="go-to-index2-btn" onclick="window.location.href='index2.html'">
     <span class="icon">🧘‍♀️✨️</span> Uptown 
   </button>
-    <button id="go-to-index4-btn" onclick="window.location.href='index4.html'">
+  <button id="go-to-index4-btn" onclick="window.location.href='index4.html'">
     <span class="icon">😢💫💗</span> Now I Feel
   </button>
 
-
 </body>
-</html>
+  </html>
