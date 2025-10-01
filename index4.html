@@ -20,6 +20,7 @@
       box-shadow: 0 2px 24px rgba(0,0,0,0.09);
       border-radius: 12px;
       padding: 32px 24px 24px 24px;
+      position: relative;
     }
     h1, h2 {
       font-family: 'Montserrat', 'Segoe UI', sans-serif;
@@ -72,7 +73,55 @@
     }
     .topic-section {
       margin-bottom: 28px;
+      position: relative;
+      padding-bottom: 2.5em;
     }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 0 6px 0;
+      gap: 8px;
+    }
+    .nav-btn {
+      background: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 22px;
+      padding: 0.4em 1.4em;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 1px 7px rgba(74,144,226,0.09);
+      transition: background 0.18s, box-shadow 0.18s;
+    }
+    .nav-btn:hover {
+      background: #2c3e50;
+      box-shadow: 0 3px 18px rgba(74,144,226,0.16);
+    }
+    /* Floating buttons */
+    .float-btn {
+      position: fixed;
+      right: 30px;
+      z-index: 9999;
+      border: none;
+      border-radius: 22px;
+      padding: 0.5em 1.2em;
+      font-size: 1.07em;
+      color: #fff;
+      background: #4a90e2;
+      box-shadow: 0 2px 8px rgba(74,144,226,0.15);
+      opacity: 0.93;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      margin-bottom: 12px;
+    }
+    .float-btn:hover {
+      background: #2c3e50;
+      box-shadow: 0 4px 24px rgba(74,144,226,0.2);
+      opacity: 1;
+    }
+    #back-to-top-btn { bottom: 90px; }
+    #back-to-index-btn { bottom: 30px; background: #51b779; }
+    #back-to-index-btn:hover { background: #2b7947; }
     .subtle {
       color: #888;
       font-size: 0.97em;
@@ -81,8 +130,15 @@
       .container { padding: 14px 6px; }
       h1 { font-size: 1.25em; }
       h2 { font-size: 1em; }
+      .nav-btn { font-size: 0.97em; padding: 0.35em 1em; }
+      .float-btn { font-size: 0.97em; padding: 0.4em 0.9em;}
     }
   </style>
+  <script>
+    function scrollToTop() {
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+  </script>
 </head>
 <body>
   <div class="container">
@@ -130,7 +186,12 @@
       This is the story of Hi Li and Nichole—of a tech boy who fell in love, and a girl who became his memory.
     </p>
 
+    <!-- CHAPTERS WITH NAVIGATION BUTTONS -->
     <div id="chapter1" class="topic-section">
+      <div class="nav-buttons">
+        <span></span>
+        <button class="nav-btn" onclick="location.href='#chapter2'">Next ➔</button>
+      </div>
       <h2>Chapter 1 – When My Heart First Spoke</h2>
       <p>
         I never knew love until the day my heart whispered your name.<br>
@@ -146,9 +207,17 @@
         That was the day my heart first spoke.<br>
         And it said, “Now I feel.”
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#introduction'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter2'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter2" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter1'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter3'">Next ➔</button>
+      </div>
       <h2>Chapter 2 – The Tech Boy’s Heart</h2>
       <p>
         I am not the kind of boy who spends days in classrooms anymore. My books are no longer exercise books filled with notes; they are websites, codes, and designs that live on glowing screens. While others chase grades, I chase pixels and ideas. I am a tech boy—my world is digital, my battles are with codes that sometimes refuse to work, and my victories are the websites that come alive in front of me.
@@ -167,9 +236,17 @@
         This tech boy—this downtown boy—may know how to build websites, but when it comes to love, I am still learning. My heart is the only screen I cannot design, because it already has her name written across it.<br>
         And maybe that’s what makes it real.
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter1'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter3'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter3" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter2'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter4'">Next ➔</button>
+      </div>
       <h2>Chapter 3 – Smiles Through the Screen</h2>
       <p>
         It’s strange how a phone screen can become the most beautiful window in the world. For me, that little green WhatsApp icon was not just an app—it was the place where I found you.
@@ -190,9 +267,17 @@
         Through WhatsApp, you gave me more than conversations—you gave me hope. A reason to wake up and check my phone. A reason to believe that love can travel through signals and reach straight into the heart.<br>
         And each time you smiled through that screen, I whispered to myself: “Now I feel.”
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter2'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter4'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter4" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter3'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter5'">Next ➔</button>
+      </div>
       <h2>Chapter 4 – Far but Near</h2>
       <p>
         Love is strange. It teaches you that someone can be far away, living their own life, walking streets you may never see, yet at the same time they can feel closer than the people standing right beside you.
@@ -211,9 +296,17 @@
         Every text I receive, every dream I carry, every memory of our conversations tells me the same thing: distance cannot break what the heart has chosen.<br>
         So even though you are there, and I am here—in love, we are not apart.
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter3'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter5'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter5" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter4'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter6'">Next ➔</button>
+      </div>
       <h2>Chapter 5 – The Quiet in Between</h2>
       <p>
         Love doesn’t only live in words. Sometimes, it lives in silence too.
@@ -237,9 +330,17 @@
         So I learned to live in the quiet in between. To find your smile in memories, your presence in dreams, and your voice in the echo of my own heart.<br>
         Because even when you said nothing… my love for you still spoke.
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter4'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter6'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter6" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter5'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter7'">Next ➔</button>
+      </div>
       <h2>Chapter 6 – Dreams That Carry Her</h2>
       <p>
         When the world goes quiet and my phone no longer glows with your name, I find you in another place—my dreams.
@@ -264,9 +365,17 @@
         And when I wake up, even with the pain, I whisper the same words:<br>
         “Now I feel.”
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter5'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter7'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter7" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter6'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter8'">Next ➔</button>
+      </div>
       <h2>Chapter 7 – The Pain of Waiting</h2>
       <p>
         Time is heavy when you love someone from afar.<br>
@@ -287,9 +396,17 @@
       <p>
         So I wait, carrying both the pain and the hope, because love is worth every second, every ache, every whisper of “now I feel.”
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter6'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter8'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter8" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter7'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter9'">Next ➔</button>
+      </div>
       <h2>Chapter 8 – Love in Shadows</h2>
       <p>
         Even in the busiest streets of downtown, her shadow follows me.<br>
@@ -307,9 +424,17 @@
       <p>
         Even in the bright, noisy streets and the glowing screens, she remains the quiet center of my world. And every time I think I am alone, I realize I am not—because love has left its mark in the shadows of my life.
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter7'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter9'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter9" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter8'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter10'">Next ➔</button>
+      </div>
       <h2>Chapter 9 – Now I Feel</h2>
       <p>
         Now I feel.<br>
@@ -332,9 +457,17 @@
         And as I whisper her name in the silence of downtown nights, as I stare at my glowing screens, as I walk through crowded streets alone, I know the truth of it all:<br>
         Now I feel.
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter8'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter10'">Next ➔</button>
+      </div>
     </div>
 
     <div id="chapter10" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter9'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#epilogue'">Next ➔</button>
+      </div>
       <h2>Chapter 10 – If She Reads This One Day</h2>
       <p>
         If she reads this one day…<br>
@@ -355,9 +488,17 @@
         And maybe, if you read this… you will understand.<br>
         Now I feel.
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter9'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#epilogue'">Next ➔</button>
+      </div>
     </div>
 
     <div id="epilogue" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter10'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#conclusion'">Next ➔</button>
+      </div>
       <h2>Epilogue</h2>
       <p>
         Love is not always about holding hands or being side by side. Sometimes, it is about holding a memory, a dream, a hope that refuses to fade.
@@ -371,9 +512,17 @@
       <p>
         And maybe that is what love truly is—not possession, not closeness, but the courage to feel, to wait, to hope, and to let someone exist in your heart, even from afar.
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter10'">⟵ Previous</button>
+        <button class="nav-btn" onclick="location.href='#conclusion'">Next ➔</button>
+      </div>
     </div>
 
     <div id="conclusion" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#epilogue'">⟵ Previous</button>
+        <span></span>
+      </div>
       <h2>Conclusion</h2>
       <p>
         <strong>Now I Feel</strong> is my story, my truth, my heart written in letters and chapters. It is a testament to the power of love across distance, time, and silence.<br>
@@ -385,7 +534,14 @@
       <p>
         Because through all the screens, all the silence, all the distance—now I feel.
       </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#epilogue'">⟵ Previous</button>
+        <span></span>
+      </div>
     </div>
   </div>
+  <!-- Floating buttons -->
+  <button class="float-btn" id="back-to-top-btn" onclick="scrollToTop()" title="Back to Top">⬆️ Top</button>
+  <button class="float-btn" id="back-to-index-btn" onclick="location.href='index.html'" title="Back to Index">🏠 Index</button>
 </body>
-    </html>
+  </html>
