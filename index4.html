@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    /* CSS Variables for Easy Customization */
+    /* New, Warmer Color Palette */
     :root {
-      --primary-color: #3498db; /* A professional, tech-friendly blue */
-      --secondary-color: #2c3e50; /* Dark text/header color */
-      --background-light: #f9fbfd; /* Very light background */
-      --background-paper: #ffffff; /* White content area */
-      --shadow-subtle: 0 1px 12px rgba(0, 0, 0, 0.05);
+      --primary-color: #4a90e2; /* Deep Sky Blue (Modern Tech) */
+      --accent-color: #e91e63; /* Deep Rose Pink (Love/Passion) */
+      --secondary-color: #2c3e50; /* Dark Text/Header */
+      --background-light: #fef8f8; /* Soft Off-White/Pinkish tint */
+      --background-paper: #ffffff;
+      --shadow-subtle: 0 4px 18px rgba(0, 0, 0, 0.08); /* More noticeable shadow */
     }
     body {
       font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
@@ -27,40 +28,47 @@
       margin: 40px auto;
       background: var(--background-paper);
       box-shadow: var(--shadow-subtle);
-      border-radius: 6px; /* Sharper, cleaner look */
+      border-radius: 10px; /* Softer edges */
       padding: 40px 30px 30px 30px;
       position: relative;
+      border: 1px solid #f0f0f0; /* Subtle outer border */
     }
     h1, h2 {
-      font-family: 'Playfair Display', serif; /* Elegant font for titles */
+      font-family: 'Playfair Display', serif;
       color: var(--secondary-color);
       margin-top: 0;
       line-height: 1.3;
     }
     h1 {
-      font-size: 2.4em;
-      margin-bottom: 12px;
+      font-size: 2.6em; /* Slightly larger title */
+      margin-bottom: 15px;
       text-align: center;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
       font-weight: 700;
     }
     h2 {
       margin-top: 45px;
-      font-size: 1.5em;
-      border-bottom: 2px solid var(--primary-color); /* Stronger accent line */
+      font-size: 1.6em;
+      border-bottom: 3px solid var(--accent-color); /* Bold colored accent line */
+      color: var(--primary-color); /* H2 in a tech blue color */
       padding-bottom: 8px;
       margin-bottom: 25px;
     }
     p { margin-bottom: 1.4em; }
+    
+    /* Blockquote with Color Accent */
     blockquote {
-      background: #ecf0f3;
-      border-left: 5px solid var(--primary-color);
-      margin: 24px 0;
-      padding: 16px 24px;
+      background: #fff0f5; /* Very light pink background */
+      border-left: 6px solid var(--accent-color); /* Rose pink border */
+      margin: 28px 0;
+      padding: 20px 28px;
       font-style: italic;
       color: #555;
-      border-radius: 4px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(233, 30, 99, 0.1); /* Subtle rose shadow */
     }
+    
+    /* Table of Contents - Primary Color Links */
     ul.toc {
       list-style: none;
       padding: 0;
@@ -68,23 +76,25 @@
       font-size: 1.1em;
     }
     ul.toc li {
-      padding: 6px 0;
+      padding: 8px 0;
+      border-bottom: 1px dotted #ccc; /* Subtle separator */
     }
     ul.toc a {
-      color: var(--primary-color);
+      color: var(--accent-color); /* TOC links in rose pink */
       text-decoration: none;
       transition: color 0.2s, text-decoration 0.2s;
     }
     ul.toc a:hover {
-      color: var(--secondary-color);
+      color: var(--primary-color);
       text-decoration: underline;
     }
+
     img {
       display: block;
       margin: 25px auto;
       max-width: 90%;
-      border-radius: 4px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
     .meta, .copyright {
       text-align: center;
@@ -93,12 +103,13 @@
       color: #777;
     }
     .subtle {
-      color: #999;
-      font-size: 0.7em;
+      color: var(--accent-color); /* Subtle text in pink */
+      font-size: 0.75em;
       display: block;
       margin-top: 5px;
     }
-    /* Navigation Buttons - Two buttons only */
+    
+    /* Navigation Buttons - Vibrant and Rounded */
     .nav-buttons {
       display: flex;
       justify-content: space-between;
@@ -107,37 +118,36 @@
       align-items: center;
     }
     .nav-btn {
-      background: var(--primary-color);
+      background: var(--accent-color); /* Main navigation in rose pink */
       color: #fff;
       border: none;
-      border-radius: 4px; /* Squared off look */
-      padding: 0.6em 1.8em;
-      font-size: 1em;
+      border-radius: 25px; /* Fully rounded buttons */
+      padding: 0.7em 2em;
+      font-size: 1.05em;
       cursor: pointer;
       font-weight: 500;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 10px rgba(233, 30, 99, 0.2);
       transition: background 0.2s, transform 0.1s;
       flex-grow: 1;
-      max-width: 160px;
+      max-width: 180px;
       text-align: center;
-      text-decoration: none; /* Ensure no underline on anchor tags if used */
     }
     .nav-btn:hover {
-      background: var(--secondary-color); /* Darker on hover */
-      transform: translateY(-1px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      background: var(--primary-color); /* Tech blue on hover for contrast */
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }
-    .nav-buttons span:empty { flex-grow: 1; } /* Used to align one button when the other is missing */
+    .nav-buttons span:empty { flex-grow: 1; }
 
-    /* Floating buttons */
+    /* Floating buttons - Blue and Green */
     .float-btn {
       position: fixed;
       right: 25px;
       z-index: 9999;
       border: none;
-      border-radius: 4px;
+      border-radius: 25px;
       padding: 0.5em 1.2em;
-      font-size: 0.9em;
+      font-size: 0.95em;
       color: #fff;
       background: var(--primary-color);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -150,11 +160,11 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
     #back-to-top-btn { bottom: 85px; }
-    #back-to-index-btn { bottom: 30px; background: #2ecc71; } /* Green for 'Home' */
-    #back-to-index-btn:hover { background: #27ae60; }
+    #back-to-index-btn { bottom: 30px; background: #51b779; } /* Green for 'Home' */
+    #back-to-index-btn:hover { background: #2b7947; }
     
     @media (max-width: 700px) {
-      .container { margin: 10px; padding: 20px 15px; }
+      .container { margin: 10px; padding: 20px 15px; border-radius: 0; }
       h1 { font-size: 1.8em; }
       h2 { font-size: 1.3em; }
       .nav-btn { font-size: 0.9em; padding: 0.5em 1.2em; max-width: 140px; }
@@ -168,9 +178,7 @@
     function scrollToTop() {
       window.scrollTo({top:0, behavior:'smooth'});
     }
-    // Auto-play script is better placed here or at the end of the body
     document.addEventListener("DOMContentLoaded", () => {
-      // Delaying playback until user interaction to bypass modern browser restrictions
       document.body.addEventListener("click", () => {
         const audio = document.getElementById("loveAudio");
         audio.muted = false;
@@ -245,7 +253,8 @@
 
     <div id="chapter1" class="topic-section">
       <div class="nav-buttons">
-        <span></span> <button class="nav-btn" onclick="location.href='#chapter2'">Next ➔</button>
+        <span></span>
+        <button class="nav-btn" onclick="location.href='#chapter2'">Next ➔</button>
       </div>
       <h2>Chapter 1 – When My Heart First Spoke</h2>
       <img src="https://i.postimg.cc/0j9NXW3B/2cb061e9-5e37-4121-af29-0eb07c6e45b4.jpg" alt="Chapter 1 Illustration">
