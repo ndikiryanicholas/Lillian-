@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>now i feel — a tech boy’s love, pain, and memories of hi li</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'segoe ui', 'helvetica neue', arial, sans-serif;
+      background: #f8f9fb;
+      color: #222;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 820px;
+      margin: 40px auto;
+      background: #fff;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.09);
+      border-radius: 12px;
+      padding: 32px 24px 24px 24px;
+      position: relative;
+    }
+    h1, h2 {
+      font-family: 'montserrat', 'segoe ui', sans-serif;
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 2.1em;
+      margin-bottom: 16px;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 42px;
+      font-size: 1.35em;
+      border-bottom: 1px solid #e5e7ea;
+      padding-bottom: 6px;
+    }
+    h3 {
+      margin-top: 32px;
+      font-size: 1.15em;
+      color: #34495e;
+    }
+    blockquote {
+      background: #f4f7fa;
+      border-left: 4px solid #4a90e2;
+      margin: 18px 0;
+      padding: 12px 20px;
+      font-style: italic;
+      color: #3b506c;
+      border-radius: 8px;
+    }
+    ul.toc {
+      list-style: none;
+      padding: 0;
+      margin: 18px 0 36px 0;
+      font-size: 1.05em;
+    }
+    ul.toc li {
+      padding: 4px 0;
+    }
+    ul.toc a {
+      color: #4a90e2;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    ul.toc a:hover {
+      color: #2c3e50;
+      text-decoration: underline;
+    }
+    .topic-section {
+      margin-bottom: 28px;
+      position: relative;
+      padding-bottom: 2.5em;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 0 6px 0;
+      gap: 8px;
+    }
+    .nav-btn {
+      background: #4a90e2;
+      color: #fff;
+      border: none;
+      border-radius: 22px;
+      padding: 0.4em 1.4em;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 1px 7px rgba(74,144,226,0.09);
+      transition: background 0.18s, box-shadow 0.18s;
+    }
+    .nav-btn:hover {
+      background: #2c3e50;
+      box-shadow: 0 3px 18px rgba(74,144,226,0.16);
+    }
+    /* floating buttons */
+    .float-btn {
+      position: fixed;
+      right: 30px;
+      z-index: 9999;
+      border: none;
+      border-radius: 22px;
+      padding: 0.5em 1.2em;
+      font-size: 1.07em;
+      color: #fff;
+      background: #4a90e2;
+      box-shadow: 0 2px 8px rgba(74,144,226,0.15);
+      opacity: 0.93;
+      cursor: pointer;
+      transition: background 0.2s, box-shadow 0.2s;
+      margin-bottom: 12px;
+    }
+    .float-btn:hover {
+      background: #2c3e50;
+      box-shadow: 0 4px 24px rgba(74,144,226,0.2);
+      opacity: 1;
+    }
+    #back-to-top-btn { bottom: 90px; }
+    #back-to-index-btn { bottom: 30px; background: #51b779; }
+    #back-to-index-btn:hover { background: #2b7947; }
+    .subtle {
+      color: #888;
+      font-size: 0.97em;
+    }
+    .book-image {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        display: block; /* Ensures it takes its own line */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media (max-width: 700px) {
+      .container { padding: 14px 6px; }
+      h1 { font-size: 1.25em; }
+      h2 { font-size: 1em; }
+      .nav-btn { font-size: 0.97em; padding: 0.35em 1em; }
+      .float-btn { font-size: 0.97em; padding: 0.4em 0.9em;}
+    }
+  </style>
+  <script>
+    function scrolltotop() {
+      window.scrollTo({top:0, behavior:'smooth'});
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>📖 now i feel<br><span class="subtle">a tech boy’s love, pain, and memories of hi li</span></h1>
+    <h2>about the book</h2>
+    <img src="" alt="An abstract image of a young man (Nichole) looking thoughtfully at a phone with a city skyline and digital network overlay, with a faint, smiling female silhouette (Hi Li) overlaid, representing love and tech intertwined." class="book-image">
+    <p>
+      <strong>now i feel</strong> is a story of love told through the heart of nichole, a downtown boy, a tech mind, who once thought his world was only made of codes, screens, and websites. then came hi li—the girl who smiled through his phone, the one who became a dream, a memory, and a wound that still breathes.
+    </p>
+    <p>
+      this book is not fiction. it is a diary of love, distance, and silence. it is about how whatsapp texts could hold an entire world, how silence could break it, and how memory could rebuild it.<br>
+      nichole is no longer a student. he is a website developer, a tech boy walking the noisy streets of downtown. but behind every screen he designs, every line of code he writes, there is a name hidden: hi li.
+    </p>
+
+    <h2>dedication</h2>
+    <img src="" alt="A handwritten dedication 'To Hi Li' on aged paper, with a soft, melancholic light, symbolizing Nichole's heartfelt emotion towards Hi Li." class="book-image">
+    <blockquote>
+      to hi li, the girl who taught me that love can be both the brightest smile and the heaviest silence.
+    </blockquote>
+
+    <h2>acknowledgement</h2>
+    <img src="" alt="Two young men, Nichole and his Big Bro Grayson, sharing a quiet, supportive moment in a modern setting, perhaps over laptops, symbolizing brotherhood and shared journey." class="book-image">
+    <blockquote>
+      i thank god for giving me a heart that feels deeply.<br>
+      i thank my big bro grayson (internetexplorer) for walking with me through words, always keeping me strong.<br>
+      and i thank hi li—for being the reason these pages exist.
+    </blockquote>
+
+    <h2>table of contents</h2>
+    <ul class="toc">
+      <li><a href="#chapter1">1. when my heart first spoke</a></li>
+      <li><a href="#chapter2">2. the tech boy’s heart</a></li>
+      <li><a href="#chapter3">3. smiles through the screen</a></li>
+      <li><a href="#chapter4">4. far but near</a></li>
+      <li><a href="#chapter5">5. the quiet in between</a></li>
+      <li><a href="#chapter6">6. dreams that carry her</a></li>
+      <li><a href="#chapter7">7. the pain of waiting</a></li>
+      <li><a href="#chapter8">8. love in shadows</a></li>
+      <li><a href="#chapter9">9. now i feel</a></li>
+      <li><a href="#chapter10">10. if she reads this one day</a></li>
+      <li><a href="#epilogue">epilogue</a></li>
+      <li><a href="#conclusion">conclusion</a></li>
+    </ul>
+
+    <h2>introduction</h2>
+    <img src="" alt="A solitary young man (Nichole), a tech boy, looking out over a bustling downtown city at dusk, with digital elements subtly integrated, representing reflection on his love for Hi Li and the distance between them." class="book-image">
+    <p>
+      love is not always about being close. sometimes, it is about distance, waiting, and silence. this book is my truth, my journey, my voice. it is the way my heart speaks when whatsapp texts grow silent and only memories answer.<br>
+      this is the story of hi li and nichole—of a tech boy who fell in love, and a girl who became his memory.
+    </p>
+
+    
+    <div id="chapter1" class="topic-section">
+      <div class="nav-buttons">
+        <span></span>
+        <button class="nav-btn" onclick="location.href='#chapter2'">next ➔</button>
+      </div>
+      <h2>chapter 1 – when my heart first spoke</h2>
+      <img src="" alt="A stylized image of a young man's (Nichole's) heart with soft light emanating from it, subtly intertwined with abstract tech lines, symbolizing the sudden awakening of love for Hi Li." class="book-image">
+      <p>
+        i never knew love until the day my heart whispered your name.<br>
+        it wasn’t loud, it wasn’t dramatic—it was soft, like a quiet wind that passes through downtown streets when the city is half asleep.<br>
+        hi li, you came into my world not as a stranger, but as someone my soul already recognized. i was just a tech boy, a downtown boy, fixing codes, designing screens, and moving with life like it was a routine. but the moment i felt you, everything i thought i knew about life changed.
+      </p>
+      <p>
+        your smile reached me through a screen, yet it felt more real than the faces i saw every day. i didn’t need to touch your hand to know it carried warmth. i didn’t need to hear your voice in person to know it carried peace.<br>
+        when my phone lit up with your name, it was as if the whole city went silent just to listen to my heart. and in that silence, i realized—this was no ordinary feeling. this was love, and it had found me.
+      </p>
+      <p>
+        from that moment, my days were no longer measured by hours, but by the times you appeared on my screen. every “hi,” every emoji, every little word you sent carried weight. my heart was learning a new language, and the dictionary had only one name in it: hi li.<br>
+        that was the day my heart first spoke.<br>
+        and it said, “now i feel.”
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#introduction'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter2'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter2" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter1'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter3'">next ➔</button>
+      </div>
+      <h2>chapter 2 – the tech boy’s heart</h2>
+      <img src="" alt="A young man (Nichole), a 'tech boy', looking intently at a laptop screen in a cafe or urban setting, but with a subtle, wistful expression, hinting at deeper emotions for Hi Li beyond the code." class="book-image">
+      <p>
+        i am not the kind of boy who spends days in classrooms anymore. my books are no longer exercise books filled with notes; they are websites, codes, and designs that live on glowing screens. while others chase grades, i chase pixels and ideas. i am a tech boy—my world is digital, my battles are with codes that sometimes refuse to work, and my victories are the websites that come alive in front of me.
+      </p>
+      <p>
+        downtown is loud. cars honk, people rush, voices rise and fall like a storm of noise. but inside me, it’s quiet, because my heart beats for something the city cannot see. i move through the streets like any other boy, but inside me lives a secret: her.<br>
+        hi li.
+      </p>
+      <p>
+        even while i sit behind a laptop, fixing a broken script, my thoughts wander to her smile. even when i upload files and check links, i remember the little chats we had—the “good mornings,” the jokes, the tiny things that made me feel alive.
+      </p>
+      <p>
+        i thought being a developer made me strong, untouchable, like my heart was just another program i could control. but when she came, i realized love has no code. there’s no line you can write to stop the feelings, no command that can debug the pain of missing her.
+      </p>
+      <p>
+        this tech boy—this downtown boy—may know how to build websites, but when it comes to love, i am still learning. my heart is the only screen i cannot design, because it already has her name written across it.<br>
+        and maybe that’s what makes it real.
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter1'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter3'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter3" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter2'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter4'">next ➔</button>
+      </div>
+      <h2>chapter 3 – smiles through the screen</h2>
+      <img src="" alt="A young man's (Nichole's) hand holding a smartphone, with a WhatsApp chat open showing smiling emojis and text from a girl (Hi Li). A soft, warm glow emanates from the screen, highlighting the importance of digital connection." class="book-image">
+      <p>
+        it’s strange how a phone screen can become the most beautiful window in the world. for me, that little green whatsapp icon was not just an app—it was the place where i found you.
+      </p>
+      <p>
+        i still remember the way your name would light up my notifications. my heart always jumped before my fingers even touched the phone. every message from you felt like sunlight breaking through a cloudy sky.
+      </p>
+      <p>
+        we didn’t need long conversations. sometimes just a single “hi 😊” from you carried enough warmth to last me a whole day. when you sent me your smile through emojis or a picture, it was more than pixels—it was a piece of you, a memory i could hold.
+      </p>
+      <p>
+        there were nights when the city outside was loud, but all i heard was the sound of your typing… those three dots dancing on my screen, holding my breath hostage until your message arrived.
+      </p>
+      <p>
+        your words were simple, yet they had weight. they told me i wasn’t invisible. they told me that even from a distance, i mattered to you in some way. and for a tech boy like me, who spent most of his time behind glowing screens, you became the brightest screen of all.
+      </p>
+      <p>
+        through whatsapp, you gave me more than conversations—you gave me hope. a reason to wake up and check my phone. a reason to believe that love can travel through signals and reach straight into the heart.<br>
+        and each time you smiled through that screen, i whispered to myself: “now i feel.”
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter2'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter4'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter4" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter3'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter5'">next ➔</button>
+      </div>
+      <h2>chapter 4 – far but near</h2>
+      <img src="" alt="A split image showing two distinct scenes: a young man (Nichole) in a bustling downtown, and a young woman (Hi Li) in a different, perhaps more serene, setting. A subtle, glowing connection bridges them, symbolizing their love across physical distance." class="book-image">
+      <p>
+        love is strange. it teaches you that someone can be far away, living their own life, walking streets you may never see, yet at the same time they can feel closer than the people standing right beside you.
+      </p>
+      <p>
+        hi li, you are miles away, still in school, building your own journey. and me, i am here downtown—moving with the noise of the city, carrying laptops, fixing codes, chasing dreams. on the surface, our worlds look different, almost like two lines that run side by side but never touch.
+      </p>
+      <p>
+        but in my heart, you are near.<br>
+        i don’t need to see you every day to feel you. i don’t need to sit next to you to know your presence. when i close my eyes, your smile is clearer than the faces i pass in the crowded streets. when i breathe, it feels like your name is written in the air around me.
+      </p>
+      <p>
+        yes, the distance is painful. sometimes it feels like an invisible wall standing between us. but love finds its way through walls. it bends time, it crosses miles, it travels through silence. and that is why even when you are far, i feel you near.
+      </p>
+      <p>
+        every text i receive, every dream i carry, every memory of our conversations tells me the same thing: distance cannot break what the heart has chosen.<br>
+        so even though you are there, and i am here—in love, we are not apart.
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter3'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter5'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter5" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter4'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter6'">next ➔</button>
+      </div>
+      <h2>chapter 5 – the quiet in between</h2>
+      <img src="" alt="A dimly lit room with a lonely smartphone on a table, its screen dark, next to a young man (Nichole) looking out the window at the city, conveying a sense of quiet longing and waiting for Hi Li's message." class="book-image">
+      <p>
+        love doesn’t only live in words. sometimes, it lives in silence too.
+      </p>
+      <p>
+        there were days when the chats slowed down, when my phone stayed still, and no notification carried your name. the city around me kept moving, people shouting prices in downtown, cars rushing, voices filling the air—but inside me, it was quiet. too quiet.
+      </p>
+      <p>
+        it’s a strange kind of silence—the one that comes from missing someone. it’s not empty; it’s heavy. every second without your message felt like a weight pressing on my chest. i would open whatsapp again and again, scrolling through old texts, re-reading the same words as if they could come alive and speak new ones.
+      </p>
+      <p>
+        your silence spoke too, louder than any emoji. it told me you were busy with school, with life. it reminded me that while my world had paused on you, yours was still running forward.
+      </p>
+      <p>
+        but in that quiet, i also realized something: love is patient. it waits. it hopes. even when the phone stays dark, my heart stayed lit with your memory.
+      </p>
+      <p>
+        and maybe the silence was not emptiness after all. maybe it was a test—of how much i could hold on, how much i could feel even when there was nothing to see or hear.
+      </p>
+      <p>
+        so i learned to live in the quiet in between. to find your smile in memories, your presence in dreams, and your voice in the echo of my own heart.<br>
+        because even when you said nothing… my love for you still spoke.
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter4'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter6'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter6" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter5'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter7'">next ➔</button>
+      </div>
+      <h2>chapter 6 – dreams that carry her</h2>
+      <img src="" alt="A stylized image of a young man (Nichole) sleeping peacefully, with ethereal, glowing images of a young woman's (Hi Li's) smiling face and shared moments subtly appearing above their head, representing dreams and cherished memories." class="book-image">
+      <p>
+        when the world goes quiet and my phone no longer glows with your name, i find you in another place—my dreams.
+      </p>
+      <p>
+        it is in dreams that the distance disappears. there are no schools, no downtown streets, no miles between us. there, it is just you and me, walking, laughing, talking as if we were never apart.
+      </p>
+      <p>
+        sometimes the dreams are simple—you sitting beside me, your smile as bright as the morning sun. other times, they are grand—you and i traveling places i’ve never seen before, holding hands, living a life i can only imagine.
+      </p>
+      <p>
+        but whether simple or grand, they all end the same way—with me waking up and realizing it was only a dream. that’s when the pain stings the hardest, because i don’t want to lose you twice: once in life, and again when i open my eyes.
+      </p>
+      <p>
+        still, i treasure those dreams. they are like small gifts my heart gives me when reality feels too heavy. they remind me of what i feel, of who you are to me, of why i hold on even when silence grows louder.
+      </p>
+      <p>
+        dreams carry you to me in ways reality cannot. and maybe that’s the magic of love—it makes the impossible feel real, even if only for a night.
+      </p>
+      <p>
+        so i close my eyes again and again, not to escape, but to find you. because in dreams, i don’t just miss you—i live with you.<br>
+        and when i wake up, even with the pain, i whisper the same words:<br>
+        “now i feel.”
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter5'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter7'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter7" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter6'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter8'">next ➔</button>
+      </div>
+      <h2>chapter 7 – the pain of waiting</h2>
+      <img src="" alt="A clock face with hands moving very slowly, almost stuck, overlaid with a melancholic image of a young man (Nichole) staring out a window at a distant, bustling city, conveying the heavy feeling of waiting for Hi Li." class="book-image">
+      <p>
+        time is heavy when you love someone from afar.<br>
+        hi li, you are still in school, living your own life, chasing your dreams while i watch from the sidelines. each day stretches like a road with no end, each hour dragging like it knows how much i miss you.
+      </p>
+      <p>
+        i wait—not because i have to, but because my heart refuses to move on. i wait in the quiet streets of downtown, in the hum of computers, in the glow of screens that somehow feel dimmer without your presence.
+      </p>
+      <p>
+        sometimes, i wonder if you feel the same weight. do you think of me when the bell rings at your school? do my messages linger in your mind like they linger in mine?
+      </p>
+      <p>
+        the waiting hurts. it twists the heart into knots, pulls at the chest, makes the nights longer than they should be. and yet, i cannot complain, because every day i wait, i also love. every moment of longing is proof that my heart is alive, proof that you mean more to me than anything else in this noisy city.
+      </p>
+      <p>
+        love teaches patience in its own cruel way. it asks you to hold on even when the world moves forward without you. it asks you to cherish the smallest moments—a message, a smile, a memory—as if they were treasures, because in this distance, they are all you have.
+      </p>
+      <p>
+        so i wait, carrying both the pain and the hope, because love is worth every second, every ache, every whisper of “now i feel.”
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter6'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter8'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter8" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter7'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter9'">next ➔</button>
+      </div>
+      <h2>chapter 8 – love in shadows</h2>
+      <img src="" alt="A subtle, ethereal silhouette of a girl (Hi Li) walking beside a young man (Nichole) in a bustling downtown street at dusk, visible only to him, representing a hidden or remembered love." class="book-image">
+      <p>
+        even in the busiest streets of downtown, her shadow follows me.<br>
+        i walk past crowded markets, car horns blaring, people shouting—yet in the corner of my mind, i see her. not in person, not in reality, but in memory, in longing, in the quiet corners of my heart. she moves with me through every alley, every neon-lit shop, every street where i pause to sip coffee or watch life rush by.
+      </p>
+      <p>
+        being a tech boy, i spend hours behind glowing screens. lines of code, websites, designs—they demand my attention, but even here, her presence lingers. i build pages and scripts with hands that remember her smile, and every success feels hollow if i cannot share it with her.
+      </p>
+      <p>
+        love in shadows is different. it is not loud. it does not demand. it does not interfere with life. it hides, quietly shaping everything you do, coloring the world in ways others cannot see. yet it is always there—like the echo of her laugh in a silent room, like the warmth of a sunbeam that passes through a window.
+      </p>
+      <p>
+        i have learned to live with this shadow. it is my companion, my reminder, my proof that love is not always visible, but it is always real.
+      </p>
+      <p>
+        even in the bright, noisy streets and the glowing screens, she remains the quiet center of my world. and every time i think i am alone, i realize i am not—because love has left its mark in the shadows of my life.
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter7'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter9'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter9" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter8'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter10'">next ➔</button>
+      </div>
+      <h2>chapter 9 – now i feel</h2>
+      <img src="" alt="A powerful and emotional image of a young man (Nichole) standing amidst city rain, looking upwards with a mix of sorrow and profound feeling, reflecting the overwhelming emotions of love and longing for Hi Li. Raindrops are visible." class="book-image">
+      <p>
+        now i feel.<br>
+        it is not a small feeling. it is not quiet. it crashes over me like the city rains i walk through downtown, relentless, unstoppable.
+      </p>
+      <p>
+        i feel love—the kind that makes your chest ache, that makes your hands tremble, that makes your eyes search for a smile that isn’t here. i feel longing—the kind that stretches minutes into hours, days into eternities, a constant reminder that she is far but never gone.
+      </p>
+      <p>
+        i feel hope—that maybe one day she will see, understand, and feel the same. i feel memories—the late-night texts, the small jokes, the stolen glimpses of her smile that live in my heart like treasures no one can take away.
+      </p>
+      <p>
+        i feel the pain of waiting, the quiet of absence, the shadow that follows me through every street, every screen, every line of code i write. i feel it all, and i carry it like both a weight and a crown, because it proves that my heart is alive, even when life keeps us apart.
+      </p>
+      <p>
+        now i feel what it is to truly love someone. not in stories. not in fleeting moments. but in the spaces between texts, in the pauses between conversations, in the dreams i chase when reality leaves her far away.
+      </p>
+      <p>
+        this is love. real, painful, beautiful, relentless.<br>
+        and as i whisper her name in the silence of downtown nights, as i stare at my glowing screens, as i walk through crowded streets alone, i know the truth of it all:<br>
+        now i feel.
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter8'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#chapter10'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="chapter10" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter9'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#epilogue'">next ➔</button>
+      </div>
+      <h2>chapter 10 – if she reads this one day</h2>
+      <img src="" alt="An open book with glowing text, held by a young man's (Nichole's) hand, with a faint, hopeful image of a young woman (Hi Li) looking at it from a distance, symbolizing the author's hope that she will one day read and understand his words." class="book-image">
+      <p>
+        if she reads this one day…<br>
+        i hope she understands. i hope she sees not just the words, but the heart behind them—the sleepless nights, the downtown streets i walked thinking of her, the screens i stared at, waiting for her name to light up.
+      </p>
+      <p>
+        hi li, i want you to know that love does not need to be loud to be real. it does not need to be held to be powerful. it lives in memory, in silence, in the dreams that carry you to me even when reality keeps us apart.
+      </p>
+      <p>
+        i wrote this not for anyone else, but for you. so that if one day you hold this book in your hands, you might see what my heart has been trying to say all along. that i loved you—not the idea of you, not the fleeting moments, but the real you. the you that smiled, that laughed, that lived in a world far from mine, yet so close to my soul.
+      </p>
+      <p>
+        i leave these words like a trace of me, a footprint in time. and if you read them, i hope you feel even a fraction of what i feel every day.
+      </p>
+      <p>
+        because even though distance has kept us apart, even though life has pulled us in different directions, even though the city, the screens, the silence—all of it—tried to separate us, one thing remains true:<br>
+        i loved you. i love you.<br>
+        and maybe, if you read this… you will understand.<br>
+        now i feel.
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter9'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#epilogue'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="epilogue" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter10'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#conclusion'">next ➔</button>
+      </div>
+      <h2>epilogue</h2>
+      <img src="" alt="A young man's (Nichole's) hand reaching out towards a distant, shimmering memory of a young woman's (Hi Li's) face, surrounded by abstract representations of love, hope, and enduring memory." class="book-image">
+      <p>
+        love is not always about holding hands or being side by side. sometimes, it is about holding a memory, a dream, a hope that refuses to fade.
+      </p>
+      <p>
+        for me, hi li will always be more than a name on a screen. she is the spark that taught me how to feel deeply, the reason i learned patience, the shadow that shaped my every thought in downtown streets and behind glowing screens.
+      </p>
+      <p>
+        even as life moves forward, even as the city grows louder and time keeps changing everything, her memory stays. it is carried not just in my heart, but in every word i wrote in these pages.
+      </p>
+      <p>
+        and maybe that is what love truly is—not possession, not closeness, but the courage to feel, to wait, to hope, and to let someone exist in your heart, even from afar.
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#chapter10'">⟵ previous</button>
+        <button class="nav-btn" onclick="location.href='#conclusion'">next ➔</button>
+      </div>
+    </div>
+
+    <div id="conclusion" class="topic-section">
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#epilogue'">⟵ previous</button>
+        <span></span>
+      </div>
+      <h2>conclusion</h2>
+      <img src="" alt="A young man (Nichole) sitting thoughtfully, looking at his smartphone with a serene yet profound expression, surrounded by the subtle glow of screens and the city, representing the enduring feeling of love for Hi Li despite distance and time." class="book-image">
+      <p>
+        <strong>now i feel</strong> is my story, my truth, my heart written in letters and chapters. it is a testament to the power of love across distance, time, and silence.<br>
+        being a tech boy, a downtown boy, i could fix broken websites, debug errors, and design screens—but i could not fix the ache of missing hi li. i could not control the passing of time or the miles between us. yet love found me, shaped me, and gave my heart a language it had never known.
+      </p>
+      <p>
+        if this book finds its way to her one day, i hope it carries my heart clearly, simply, and sincerely. i hope she understands the depth of what i felt, the longing that never faded, and the truth that, despite everything, love is worth feeling.
+      </p>
+      <p>
+        because through all the screens, all the silence, all the distance—now i feel.
+      </p>
+      <div class="nav-buttons">
+        <button class="nav-btn" onclick="location.href='#epilogue'">⟵ previous</button>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  
+  <button class="float-btn" id="back-to-top-btn" onclick="scrolltotop()" title="back to top">⬆️ top</button>
+  <button class="float-btn" id="back-to-index-btn" onclick="location.href='index.html'" title="back to index">🏠 home</button>
+</body>
+  </html>
