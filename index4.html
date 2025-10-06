@@ -134,6 +134,9 @@
       .float-btn { font-size: 0.97em; padding: 0.4em 0.9em;}
     }
   </style>
+  <audio id="loveAudio" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
+  </audio>
   <script>
     function scrollToTop() {
       window.scrollTo({top:0, behavior:'smooth'});
@@ -186,7 +189,6 @@
       This is the story of Hi Li and Nichole—of a tech boy who fell in love, and a girl who became his memory.
     </p>
 
-    <!-- CHAPTERS WITH NAVIGATION BUTTONS -->
     <div id="chapter1" class="topic-section">
       <div class="nav-buttons">
         <span></span>
@@ -540,8 +542,18 @@
       </div>
     </div>
   </div>
-  <!-- Floating buttons -->
   <button class="float-btn" id="back-to-top-btn" onclick="scrollToTop()" title="Back to Top">⬆️ Top</button>
   <button class="float-btn" id="back-to-index-btn" onclick="location.href='index.html'" title="Back to Index">🏠 Home</button>
+  
+  <script>
+    document.body.addEventListener("click", () => {
+      const audio = document.getElementById("loveAudio");
+      audio.muted = false;
+      // Using .play() with a catch to handle potential browser Promise rejection if play fails
+      audio.play().catch(error => {
+        // Optional: Add logging or user feedback if auto-play is blocked
+      });
+    }, { once: true });
+  </script>
 </body>
-  </html>
+</html>
