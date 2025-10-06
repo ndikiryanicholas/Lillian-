@@ -4,134 +4,161 @@
   <meta charset="UTF-8">
   <title>Now I Feel — A Tech Boy’s Love, Pain, and Memories of Hi Li</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
+    /* CSS Variables for Easy Customization */
+    :root {
+      --primary-color: #3498db; /* A professional, tech-friendly blue */
+      --secondary-color: #2c3e50; /* Dark text/header color */
+      --background-light: #f9fbfd; /* Very light background */
+      --background-paper: #ffffff; /* White content area */
+      --shadow-subtle: 0 1px 12px rgba(0, 0, 0, 0.05);
+    }
     body {
-      font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-      background: #f8f9fb;
-      color: #222;
+      font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+      background: var(--background-light);
+      color: #333;
       margin: 0;
       padding: 0;
-      line-height: 1.7;
+      line-height: 1.75;
     }
     .container {
       max-width: 820px;
       margin: 40px auto;
-      background: #fff;
-      box-shadow: 0 2px 24px rgba(0,0,0,0.09);
-      border-radius: 12px;
-      padding: 32px 24px 24px 24px;
+      background: var(--background-paper);
+      box-shadow: var(--shadow-subtle);
+      border-radius: 6px; /* Sharper, cleaner look */
+      padding: 40px 30px 30px 30px;
       position: relative;
     }
     h1, h2 {
-      font-family: 'Montserrat', 'Segoe UI', sans-serif;
-      color: #2c3e50;
+      font-family: 'Playfair Display', serif; /* Elegant font for titles */
+      color: var(--secondary-color);
       margin-top: 0;
+      line-height: 1.3;
     }
     h1 {
-      font-size: 2.1em;
-      margin-bottom: 16px;
-      letter-spacing: 1px;
+      font-size: 2.4em;
+      margin-bottom: 12px;
       text-align: center;
+      letter-spacing: 0.5px;
+      font-weight: 700;
     }
     h2 {
-      margin-top: 42px;
-      font-size: 1.35em;
-      border-bottom: 1px solid #e5e7ea;
-      padding-bottom: 6px;
+      margin-top: 45px;
+      font-size: 1.5em;
+      border-bottom: 2px solid var(--primary-color); /* Stronger accent line */
+      padding-bottom: 8px;
+      margin-bottom: 25px;
     }
-    h3 {
-      margin-top: 32px;
-      font-size: 1.15em;
-      color: #34495e;
-    }
+    p { margin-bottom: 1.4em; }
     blockquote {
-      background: #f4f7fa;
-      border-left: 4px solid #4a90e2;
-      margin: 18px 0;
-      padding: 12px 20px;
+      background: #ecf0f3;
+      border-left: 5px solid var(--primary-color);
+      margin: 24px 0;
+      padding: 16px 24px;
       font-style: italic;
-      color: #3b506c;
-      border-radius: 8px;
+      color: #555;
+      border-radius: 4px;
     }
     ul.toc {
       list-style: none;
       padding: 0;
-      margin: 18px 0 36px 0;
-      font-size: 1.05em;
+      margin: 25px 0 40px 0;
+      font-size: 1.1em;
     }
     ul.toc li {
-      padding: 4px 0;
+      padding: 6px 0;
     }
     ul.toc a {
-      color: #4a90e2;
+      color: var(--primary-color);
       text-decoration: none;
-      transition: color 0.2s;
+      transition: color 0.2s, text-decoration 0.2s;
     }
     ul.toc a:hover {
-      color: #2c3e50;
+      color: var(--secondary-color);
       text-decoration: underline;
     }
-    .topic-section {
-      margin-bottom: 28px;
-      position: relative;
-      padding-bottom: 2.5em;
+    img {
+      display: block;
+      margin: 25px auto;
+      max-width: 90%;
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
+    .meta, .copyright {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 0.95em;
+      color: #777;
+    }
+    .subtle {
+      color: #999;
+      font-size: 0.7em;
+      display: block;
+      margin-top: 5px;
+    }
+    /* Navigation Buttons - Two buttons only */
     .nav-buttons {
       display: flex;
       justify-content: space-between;
-      margin: 18px 0 6px 0;
-      gap: 8px;
+      margin: 40px 0 10px 0;
+      gap: 15px;
+      align-items: center;
     }
     .nav-btn {
-      background: #4a90e2;
+      background: var(--primary-color);
       color: #fff;
       border: none;
-      border-radius: 22px;
-      padding: 0.4em 1.4em;
+      border-radius: 4px; /* Squared off look */
+      padding: 0.6em 1.8em;
       font-size: 1em;
       cursor: pointer;
-      box-shadow: 0 1px 7px rgba(74,144,226,0.09);
-      transition: background 0.18s, box-shadow 0.18s;
+      font-weight: 500;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: background 0.2s, transform 0.1s;
+      flex-grow: 1;
+      max-width: 160px;
+      text-align: center;
+      text-decoration: none; /* Ensure no underline on anchor tags if used */
     }
     .nav-btn:hover {
-      background: #2c3e50;
-      box-shadow: 0 3px 18px rgba(74,144,226,0.16);
+      background: var(--secondary-color); /* Darker on hover */
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
+    .nav-buttons span:empty { flex-grow: 1; } /* Used to align one button when the other is missing */
+
     /* Floating buttons */
     .float-btn {
       position: fixed;
-      right: 30px;
+      right: 25px;
       z-index: 9999;
       border: none;
-      border-radius: 22px;
+      border-radius: 4px;
       padding: 0.5em 1.2em;
-      font-size: 1.07em;
+      font-size: 0.9em;
       color: #fff;
-      background: #4a90e2;
-      box-shadow: 0 2px 8px rgba(74,144,226,0.15);
-      opacity: 0.93;
+      background: var(--primary-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
       cursor: pointer;
       transition: background 0.2s, box-shadow 0.2s;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
     .float-btn:hover {
-      background: #2c3e50;
-      box-shadow: 0 4px 24px rgba(74,144,226,0.2);
-      opacity: 1;
+      background: var(--secondary-color);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
-    #back-to-top-btn { bottom: 90px; }
-    #back-to-index-btn { bottom: 30px; background: #51b779; }
-    #back-to-index-btn:hover { background: #2b7947; }
-    .subtle {
-      color: #888;
-      font-size: 0.97em;
-    }
+    #back-to-top-btn { bottom: 85px; }
+    #back-to-index-btn { bottom: 30px; background: #2ecc71; } /* Green for 'Home' */
+    #back-to-index-btn:hover { background: #27ae60; }
+    
     @media (max-width: 700px) {
-      .container { padding: 14px 6px; }
-      h1 { font-size: 1.25em; }
-      h2 { font-size: 1em; }
-      .nav-btn { font-size: 0.97em; padding: 0.35em 1em; }
-      .float-btn { font-size: 0.97em; padding: 0.4em 0.9em;}
+      .container { margin: 10px; padding: 20px 15px; }
+      h1 { font-size: 1.8em; }
+      h2 { font-size: 1.3em; }
+      .nav-btn { font-size: 0.9em; padding: 0.5em 1.2em; max-width: 140px; }
+      .float-btn { right: 10px; font-size: 0.85em; padding: 0.4em 0.8em;}
     }
   </style>
   <audio id="loveAudio" autoplay loop>
@@ -141,25 +168,36 @@
     function scrollToTop() {
       window.scrollTo({top:0, behavior:'smooth'});
     }
+    // Auto-play script is better placed here or at the end of the body
+    document.addEventListener("DOMContentLoaded", () => {
+      // Delaying playback until user interaction to bypass modern browser restrictions
+      document.body.addEventListener("click", () => {
+        const audio = document.getElementById("loveAudio");
+        audio.muted = false;
+        audio.play().catch(error => {
+          console.log("Audio playback failed:", error);
+        });
+      }, { once: true });
+    });
   </script>
 </head>
 <body>
   <div class="container">
-    <img src="https://i.ibb.co/TBp4vmk8/1759758741874.png" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
-    <h1>📖 Now I Feel<br><span class="subtle">A Downtown Boy’s Love, Pain, and Memories of Hi Li</span></h1>
+    <img src="https://i.ibb.co/TBp4vmk8/1759758741874.png" alt="Chapter 1 Illustration">
+    <h1>📖 Now I Feel<span class="subtle">A Downtown Boy’s Love, Pain, and Memories of Hi Li</span></h1>
     <div class="meta">
       <strong>✍️ Author:</strong> Bagenda Nicholas<br>
       <strong>📧 Email:</strong> nicholasbagenda@gmail.com<br>
       <strong>📞 Phone:</strong> +256742367077
     </div>
-    <img src="https://i.postimg.cc/t4yDG3Fq/Mon-21-07-2025-16-26-06.png" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+    <img src="https://i.postimg.cc/t4yDG3Fq/Mon-21-07-2025-16-26-06.png" alt="Chapter 1 Illustration">
     <div class="copyright">
       <strong>Copyright Page</strong><br>
       ©2025 by Bagenda Nicholas<br>
       All rights reserved. No part of this book may be copied, stored, or reproduced in any form without permission from the publisher.
     </div>
     <h2>About the Book</h2>
-    <img src="https://i.ibb.co/tT9jPNcx/1759762379270.png" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+    <img src="https://i.ibb.co/tT9jPNcx/1759762379270.png" alt="Chapter 1 Illustration">
     <p>
       <strong>Now I Feel</strong> is a story of love told through the heart of Nichole, a downtown boy, a tech mind, who once thought his world was only made of codes, screens, and websites. Then came Hi Li—the girl who smiled through his phone, the one who became a dream, a memory, and a wound that still breathes.
     </p>
@@ -169,13 +207,13 @@
     </p>
 
     <h2>Dedication</h2>
-    <img src="https://i.ibb.co/zHRJ0rK4/1759762454408.png" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+    <img src="https://i.ibb.co/zHRJ0rK4/1759762454408.png" alt="Chapter 1 Illustration">
     <blockquote>
       To Hi Li, the girl who taught me that love can be both the brightest smile and the heaviest silence.
     </blockquote>
 
     <h2>Acknowledgement</h2>
-    <img src="https://i.ibb.co/DDCgVzX5/1759762644534.png" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+    <img src="https://i.ibb.co/DDCgVzX5/1759762644534.png" alt="Chapter 1 Illustration">
     <blockquote>
       I thank God for giving me a heart that feels deeply.<br>
       I thank my Big Bro Grayson (InternetExplorer) for walking with me through words, always keeping me strong.<br>
@@ -199,7 +237,7 @@
     </ul>
 
     <h2>Introduction</h2>
-    <img src="https://i.postimg.cc/50RNmBvr/1759758250207.png" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+    <img src="https://i.postimg.cc/50RNmBvr/1759758250207.png" alt="Chapter 1 Illustration">
     <p>
       Love is not always about being close. Sometimes, it is about distance, waiting, and silence. This book is my truth, my journey, my voice. It is the way my heart speaks when WhatsApp texts grow silent and only memories answer.<br>
       This is the story of Hi Li and Nichole—of a tech boy who fell in love, and a girl who became his memory.
@@ -207,11 +245,10 @@
 
     <div id="chapter1" class="topic-section">
       <div class="nav-buttons">
-        <span></span>
-        <button class="nav-btn" onclick="location.href='#chapter2'">Next ➔</button>
+        <span></span> <button class="nav-btn" onclick="location.href='#chapter2'">Next ➔</button>
       </div>
       <h2>Chapter 1 – When My Heart First Spoke</h2>
-      <img src="https://i.postimg.cc/0j9NXW3B/2cb061e9-5e37-4121-af29-0eb07c6e45b4.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/0j9NXW3B/2cb061e9-5e37-4121-af29-0eb07c6e45b4.jpg" alt="Chapter 1 Illustration">
       <p>
         I never knew love until the day my heart whispered your name.<br>
         It wasn’t loud, it wasn’t dramatic—it was soft, like a quiet wind that passes through downtown streets when the city is half asleep.<br>
@@ -238,7 +275,7 @@
         <button class="nav-btn" onclick="location.href='#chapter3'">Next ➔</button>
       </div>
       <h2>Chapter 2 – The Tech Boy’s Heart</h2>
-      <img src="https://i.postimg.cc/3RXRB5Lt/6e83cb88-3c03-488e-a2e1-981e9155ddb7.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/3RXRB5Lt/6e83cb88-3c03-488e-a2e1-981e9155ddb7.jpg" alt="Chapter 1 Illustration">
       <p>
         I am not the kind of boy who spends days in classrooms anymore. My books are no longer exercise books filled with notes; they are websites, codes, and designs that live on glowing screens. While others chase grades, I chase pixels and ideas. I am a tech boy—my world is digital, my battles are with codes that sometimes refuse to work, and my victories are the websites that come alive in front of me.
       </p>
@@ -268,7 +305,7 @@
         <button class="nav-btn" onclick="location.href='#chapter4'">Next ➔</button>
       </div>
       <h2>Chapter 3 – Smiles Through the Screen</h2>
-      <img src="https://i.ibb.co/C3TZGHpn/1759758928523.png" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.ibb.co/C3TZGHpn/1759758928523.png" alt="Chapter 1 Illustration">
       <p>
         It’s strange how a phone screen can become the most beautiful window in the world. For me, that little green WhatsApp icon was not just an app—it was the place where I found you.
       </p>
@@ -300,7 +337,7 @@
         <button class="nav-btn" onclick="location.href='#chapter5'">Next ➔</button>
       </div>
       <h2>Chapter 4 – Far but Near</h2>
-      <img src="https://i.postimg.cc/G2wtGhj8/d7d62565-4e59-40e9-a47c-f10ff9b728d2.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/G2wtGhj8/d7d62565-4e59-40e9-a47c-f10ff9b728d2.jpg" alt="Chapter 1 Illustration">
       <p>
         Love is strange. It teaches you that someone can be far away, living their own life, walking streets you may never see, yet at the same time they can feel closer than the people standing right beside you.
       </p>
@@ -330,7 +367,7 @@
         <button class="nav-btn" onclick="location.href='#chapter6'">Next ➔</button>
       </div>
       <h2>Chapter 5 – The Quiet in Between</h2>
-      <img src="https://i.postimg.cc/zBZvKXk8/b31ae8d0-b3bd-4618-a77f-6dfd752adbb9.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/zBZvKXk8/b31ae8d0-b3bd-4618-a77f-6dfd752adbb9.jpg" alt="Chapter 1 Illustration">
       <p>
         Love doesn’t only live in words. Sometimes, it lives in silence too.
       </p>
@@ -365,7 +402,7 @@
         <button class="nav-btn" onclick="location.href='#chapter7'">Next ➔</button>
       </div>
       <h2>Chapter 6 – Dreams That Carry Her</h2>
-      <img src="https://i.postimg.cc/pdnymnKt/03302702-6815-4fe9-a2e3-582ff13a56cf.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/pdnymnKt/03302702-6815-4fe9-a2e3-582ff13a56cf.jpg" alt="Chapter 1 Illustration">
       <p>
         When the world goes quiet and my phone no longer glows with your name, I find you in another place—my dreams.
       </p>
@@ -401,7 +438,7 @@
         <button class="nav-btn" onclick="location.href='#chapter8'">Next ➔</button>
       </div>
       <h2>Chapter 7 – The Pain of Waiting</h2>
-      <img src="https://i.postimg.cc/SKzjnzCV/02f7ca78-36e2-41d8-89b9-6c116dce469e.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/SKzjnzCV/02f7ca78-36e2-41d8-89b9-6c116dce469e.jpg" alt="Chapter 1 Illustration">
       <p>
         Time is heavy when you love someone from afar.<br>
         Hi Li, you are still in school, living your own life, chasing your dreams while I watch from the sidelines. Each day stretches like a road with no end, each hour dragging like it knows how much I miss you.
@@ -433,7 +470,7 @@
         <button class="nav-btn" onclick="location.href='#chapter9'">Next ➔</button>
       </div>
       <h2>Chapter 8 – Love in Shadows</h2>
-      <img src="https://i.postimg.cc/4x0m417c/5ba3996c-dbac-41b0-8385-8ff5ca261193.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/4x0m417c/5ba3996c-dbac-41b0-8385-8ff5ca261193.jpg" alt="Chapter 1 Illustration">
       <p>
         Even in the busiest streets of downtown, her shadow follows me.<br>
         I walk past crowded markets, car horns blaring, people shouting—yet in the corner of my mind, I see her. Not in person, not in reality, but in memory, in longing, in the quiet corners of my heart. She moves with me through every alley, every neon-lit shop, every street where I pause to sip coffee or watch life rush by.
@@ -462,7 +499,7 @@
         <button class="nav-btn" onclick="location.href='#chapter10'">Next ➔</button>
       </div>
       <h2>Chapter 9 – Now I Feel</h2>
-      <img src="https://i.postimg.cc/cLzr1cg7/0a2f6f3a-8a03-4c66-a4a2-980bfe1a56cc.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/cLzr1cg7/0a2f6f3a-8a03-4c66-a4a2-980bfe1a56cc.jpg" alt="Chapter 1 Illustration">
       <p>
         Now I feel.<br>
         It is not a small feeling. It is not quiet. It crashes over me like the city rains I walk through downtown, relentless, unstoppable.
@@ -496,7 +533,7 @@
         <button class="nav-btn" onclick="location.href='#epilogue'">Next ➔</button>
       </div>
       <h2>Chapter 10 – If She Reads This One Day</h2>
-      <img src="https://i.postimg.cc/P57PfMpx/OIG4-d-Awko2-XI2.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/P57PfMpx/OIG4-d-Awko2-XI2.jpg" alt="Chapter 1 Illustration">
       <p>
         If she reads this one day…<br>
         I hope she understands. I hope she sees not just the words, but the heart behind them—the sleepless nights, the downtown streets I walked thinking of her, the screens I stared at, waiting for her name to light up.
@@ -528,7 +565,7 @@
         <button class="nav-btn" onclick="location.href='#conclusion'">Next ➔</button>
       </div>
       <h2>Epilogue</h2>
-      <img src="https://i.postimg.cc/bwrZj5Jr/OIG3.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/bwrZj5Jr/OIG3.jpg" alt="Chapter 1 Illustration">
       <p>
         Love is not always about holding hands or being side by side. Sometimes, it is about holding a memory, a dream, a hope that refuses to fade.
       </p>
@@ -553,7 +590,7 @@
         <span></span>
       </div>
       <h2>Conclusion</h2>
-      <img src="https://i.postimg.cc/W1MFbZVk/826557f1-b1e2-4fea-8b3e-d9c35d5fabb7.jpg" alt="Chapter 1 Illustration" style="display:block;margin:1.2em auto 1.7em auto;max-width:90%;border-radius:12px;box-shadow:0 2px 12px #e0c3fc55;">
+      <img src="https://i.postimg.cc/W1MFbZVk/826557f1-b1e2-4fea-8b3e-d9c35d5fabb7.jpg" alt="Chapter 1 Illustration">
       <p>
         <strong>Now I Feel</strong> is my story, my truth, my heart written in letters and chapters. It is a testament to the power of love across distance, time, and silence.<br>
         Being a tech boy, a downtown boy, I could fix broken websites, debug errors, and design screens—but I could not fix the ache of missing Hi Li. I could not control the passing of time or the miles between us. Yet love found me, shaped me, and gave my heart a language it had never known.
@@ -572,15 +609,5 @@
   </div>
   <button class="float-btn" id="back-to-top-btn" onclick="scrollToTop()" title="Back to Top">⬆️ Top</button>
   <button class="float-btn" id="back-to-index-btn" onclick="location.href='index.html'" title="Back to Index">🏠 Home</button>
-  
-  <script>
-    document.body.addEventListener("click", () => {
-      const audio = document.getElementById("loveAudio");
-      audio.muted = false;
-      audio.play().catch(error => {
-        // Optional: Error handling for playback failure
-      });
-    }, { once: true });
-  </script>
 </body>
 </html>
