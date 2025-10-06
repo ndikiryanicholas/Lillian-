@@ -135,7 +135,7 @@
     }
   </style>
   <audio id="loveAudio" autoplay loop>
-    <source src="https://github.com/ndikiryanicholas/Lillian-/blob/main/6074_Omutima-Guluma---juliana-kanyomoozi.mp3" type="audio/mp3">
+    <source src="https://github.com/ndikiryanicholas/Lillian-/blob/main/6074_Omutima-Guluma---juliana-kanyomoozi.mp3?raw=true" type="audio/mp3">
   </audio>
   <script>
     function scrollToTop() {
@@ -549,9 +549,8 @@
     document.body.addEventListener("click", () => {
       const audio = document.getElementById("loveAudio");
       audio.muted = false;
-      // Using .play() with a catch to handle potential browser Promise rejection if play fails
       audio.play().catch(error => {
-        // Optional: Add logging or user feedback if auto-play is blocked
+        // Optional: Error handling for playback failure
       });
     }, { once: true });
   </script>
